@@ -15,17 +15,17 @@ def pods
   pod 'SwiftLint'
 end
 
-target 'safeline' do
+target 'trader' do
   core
   pods
 end
 
-target 'safelineTests' do
+target 'traderTests' do
   core
   pods
 end
 
-project 'safeline', {
+project 'trader', {
   'Debug' => :debug,
   'Debug-Staging' => :debug,
   'Release' => :release,

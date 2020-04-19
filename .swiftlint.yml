@@ -15,8 +15,8 @@ opt_in_rules:
 
 excluded:
   - Pods
-  - safeline/Core
-  - safelineTests
+  - trader/Core
+  - traderTests
 
 analyzer_rules:
   - unused_import
