@@ -1,0 +1,55 @@
+PODS:
+  - Core (0.0.1):
+    - Core/Bytes (= 0.0.1)
+    - Core/Cache (= 0.0.1)
+    - Core/Validation (= 0.0.1)
+  - Core/Bytes (0.0.1)
+  - Core/Cache (0.0.1)
+  - Core/Validation (0.0.1)
+  - Dip (7.0.1)
+  - KeychainAccess (4.1.0)
+  - Logging (1.2.0)
+  - Sourcery (0.17.0)
+  - SwiftGen (6.1.0)
+  - SwiftLint (0.39.1)
+
+DEPENDENCIES:
+  - Core (from `https://hub.teamvoy.com/mobile/awesome-ios`, branch `mercury`)
+  - Dip
+  - KeychainAccess
+  - Logging
+  - Sourcery
+  - SwiftGen
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Dip
+    - KeychainAccess
+    - Logging
+    - Sourcery
+    - SwiftGen
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  Core:
+    :branch: mercury
+    :git: https://hub.teamvoy.com/mobile/awesome-ios
+
+CHECKOUT OPTIONS:
+  Core:
+    :commit: b43f21d3ff6182c926310a921f92e7f1d0093b4c
+    :git: https://hub.teamvoy.com/mobile/awesome-ios
+
+SPEC CHECKSUMS:
+  Core: 0003705309da35248e57d003ca056de1819d1212
+  Dip: 79509d5dc4f648e10e922ed79c608a7761c52b13
+  KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
+  Logging: 7838d379d234d7e5ae1265fa02804a9084caf04c
+  Sourcery: 3ed61be7c8a1218fce349266139379dba477efe0
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+  SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
+
+PODFILE CHECKSUM: a9c995193bdf2a8eb7a7c4ac547f4e6dc5831d1a
+
+COCOAPODS: 1.9.1

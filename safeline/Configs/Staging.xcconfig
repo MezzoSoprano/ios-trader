@@ -1,0 +1,20 @@
+
+PRODUCT_BUNDLE_IDENTIFIER = com.safelinevpn-ios.stage
+PRODUCT_DISPLAY_NAME = Safeline Stage
+DEVELOPMENT_TEAM = N2X2L89ZJ3
+GOOGLE_SERVICE_PLIST = GoogleService-Info-Dev
+
+SLASH = /
+
+SAFELINE_URL = https:$(SLASH)/api.safelinevpn.com/v3v
+SAFELINE_FORGOT_PASSWORD_URL = https:$(SLASH)/safelinevpn.com/forgot-password/?email=
+
+PROVIDER_BUNDLE_IDENTIFIER = com.safelinevpn-ios.stage.TunnelProvider
+PROVIDER_APP_GROUP = group.com.safelinevpn-ios.stage
+PROVIDER_DISPLAY_NAME = Safeline_Stage_OpenVPN
+
+FASTLANE_APPLE_ID = apple@teamvoy.com
+FASTLANE_ITC_TEAM_ID = 119551071
+FASTLANE_CERTIFICATES_GIT_URL = git@ssh.hub.teamvoy.com:mobile/certificates.git
+FASTLANE_CERTIFICATES_GIT_BRANCH = safeline_staging
+FASTLANE_SLACK_URL = hooks.slack.com/services/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

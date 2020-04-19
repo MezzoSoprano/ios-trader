@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>89915465740-g60canguis79hngap77nopivbbpd0gut.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.89915465740-g60canguis79hngap77nopivbbpd0gut</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDAL7AbmdDleLZVjBpZzUyw38dDUPJNjAA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>89915465740</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.safelinevpn.stage</string>
+	<key>PROJECT_ID</key>
+	<string>safeline-vpn</string>
+	<key>STORAGE_BUCKET</key>
+	<string>safeline-vpn.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:89915465740:ios:d1692321fdb5447c198e29</string>
+	<key>DATABASE_URL</key>
+	<string>https://safeline-vpn.firebaseio.com</string>
+</dict>
+</plist>

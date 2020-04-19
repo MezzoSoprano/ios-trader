@@ -1,2 +1,0 @@
-# ios-trader
-Diploma

@@ -1,0 +1,16 @@
+import struct Foundation.URL
+
+enum Configs {
+    
+    enum GoogleService { }
+}
+
+extension Configs {
+
+    static let baseURL = "{{ argument.apiBaseUrl }}"
+}
+
+extension Configs.GoogleService {
+    
+    static let plistName = "{{ argument.googlePlistName }}"
+}
