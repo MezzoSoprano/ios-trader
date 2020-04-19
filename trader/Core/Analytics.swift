@@ -3,7 +3,7 @@
 //  trader
 //
 //  Created by Svyatoslav Katola on 17.03.2020.
-//  Copyright © 2020 Teamvoy. All rights reserved.
+//  Copyright © 2020 Soprano. All rights reserved.
 //
 
 import Logging
@@ -26,7 +26,7 @@ enum Analytics: AnalyticsService {
     #endif
 }
 
-// MARK: - Firebase Crashlytics
+// MARK: - Logger
 
 extension Logger: AnalyticsService {
     

@@ -8,17 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		48980AAF38527D0A929C177A /* libPods-trader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 131A6E1E917C3948BEE5A788 /* libPods-trader.a */; };
-		5F900013D87B7BAB482C3680 /* libPods-traderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9808E8704FB7A2EAB46BB43 /* libPods-traderTests.a */; };
 		F10B403F2420E85C00E1080B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B403E2420E85C00E1080B /* AppDelegate.swift */; };
 		F10B40462420E85C00E1080B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10B40442420E85C00E1080B /* Main.storyboard */; };
 		F10B40482420E85D00E1080B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10B40472420E85D00E1080B /* Assets.xcassets */; };
 		F10B404B2420E85D00E1080B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10B40492420E85D00E1080B /* LaunchScreen.storyboard */; };
-		F10B40562420E85D00E1080B /* traderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B40552420E85D00E1080B /* traderTests.swift */; };
-		F10B40612420E85D00E1080B /* traderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B40602420E85D00E1080B /* traderUITests.swift */; };
-		F127C31B2424F9EB00291C7F /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F127C31A2424F9EB00291C7F /* KeychainTests.swift */; };
 		F1563F962421091600586781 /* Configs.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1563F952421091600586781 /* Configs.generated.swift */; };
-		F1697FFF242130D000774568 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1697FFE242130D000774568 /* GoogleService-Info.plist */; };
-		F16980012421360A00774568 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = F16980002421360A00774568 /* GoogleService-Info-Dev.plist */; };
 		F169800524213DD900774568 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F169800424213DD900774568 /* Analytics.swift */; };
 		F186430A2420FD3200E7B01A /* Configs.stencil in Resources */ = {isa = PBXBuildFile; fileRef = F18643092420FD3200E7B01A /* Configs.stencil */; };
 		F1A0DFFC24220B54007F26E1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1A0DFFE24220B54007F26E1 /* Localizable.strings */; };
@@ -53,12 +47,7 @@
 /* Begin PBXFileReference section */
 		131A6E1E917C3948BEE5A788 /* libPods-trader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-trader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C489688D530105073958C6 /* Pods-trader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trader.debug.xcconfig"; path = "Target Support Files/Pods-trader/Pods-trader.debug.xcconfig"; sourceTree = "<group>"; };
-		4A62C80115D57655A8EE945F /* Pods-traderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-traderTests.debug.xcconfig"; path = "Target Support Files/Pods-traderTests/Pods-traderTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5E1F609CAEA3670ABBE8F71B /* Pods-traderTests.debug-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-traderTests.debug-staging.xcconfig"; path = "Target Support Files/Pods-traderTests/Pods-traderTests.debug-staging.xcconfig"; sourceTree = "<group>"; };
-		6EF74DE7B71ABBE985AC8823 /* Pods-traderTests.release-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-traderTests.release-staging.xcconfig"; path = "Target Support Files/Pods-traderTests/Pods-traderTests.release-staging.xcconfig"; sourceTree = "<group>"; };
-		78A314B0A4C86030B0715CF9 /* Pods-traderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-traderTests.release.xcconfig"; path = "Target Support Files/Pods-traderTests/Pods-traderTests.release.xcconfig"; sourceTree = "<group>"; };
 		ABDB6887AB4B48147EF19CF2 /* Pods-trader.debug-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trader.debug-staging.xcconfig"; path = "Target Support Files/Pods-trader/Pods-trader.debug-staging.xcconfig"; sourceTree = "<group>"; };
-		C9808E8704FB7A2EAB46BB43 /* libPods-traderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-traderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC3D0B558EF7CB1575D1A04 /* Pods-trader.release-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trader.release-staging.xcconfig"; path = "Target Support Files/Pods-trader/Pods-trader.release-staging.xcconfig"; sourceTree = "<group>"; };
 		DE5CC45AA24C374770B0EDF4 /* Pods-trader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trader.release.xcconfig"; path = "Target Support Files/Pods-trader/Pods-trader.release.xcconfig"; sourceTree = "<group>"; };
 		F10B403B2420E85C00E1080B /* trader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,15 +57,8 @@
 		F10B404A2420E85D00E1080B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F10B404C2420E85D00E1080B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F10B40512420E85D00E1080B /* traderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = traderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F10B40552420E85D00E1080B /* traderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = traderTests.swift; sourceTree = "<group>"; };
-		F10B40572420E85D00E1080B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F10B405C2420E85D00E1080B /* traderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = traderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F10B40602420E85D00E1080B /* traderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = traderUITests.swift; sourceTree = "<group>"; };
-		F10B40622420E85D00E1080B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F127C31A2424F9EB00291C7F /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
 		F1563F952421091600586781 /* Configs.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.generated.swift; sourceTree = "<group>"; };
-		F1697FFE242130D000774568 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F16980002421360A00774568 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
 		F169800424213DD900774568 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		F18643032420F54400E7B01A /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		F18643042420F56300E7B01A /* Example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Example.xcconfig; sourceTree = "<group>"; };
@@ -107,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F900013D87B7BAB482C3680 /* libPods-traderTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				131A6E1E917C3948BEE5A788 /* libPods-trader.a */,
-				C9808E8704FB7A2EAB46BB43 /* libPods-traderTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,12 +115,8 @@
 			children = (
 				32C489688D530105073958C6 /* Pods-trader.debug.xcconfig */,
 				DE5CC45AA24C374770B0EDF4 /* Pods-trader.release.xcconfig */,
-				4A62C80115D57655A8EE945F /* Pods-traderTests.debug.xcconfig */,
-				78A314B0A4C86030B0715CF9 /* Pods-traderTests.release.xcconfig */,
 				ABDB6887AB4B48147EF19CF2 /* Pods-trader.debug-staging.xcconfig */,
 				DDC3D0B558EF7CB1575D1A04 /* Pods-trader.release-staging.xcconfig */,
-				5E1F609CAEA3670ABBE8F71B /* Pods-traderTests.debug-staging.xcconfig */,
-				6EF74DE7B71ABBE985AC8823 /* Pods-traderTests.release-staging.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -149,8 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				F10B403D2420E85C00E1080B /* trader */,
-				F10B40542420E85D00E1080B /* traderTests */,
-				F10B405F2420E85D00E1080B /* traderUITests */,
 				F10B403C2420E85C00E1080B /* Products */,
 				986C1D12D31585A421B5EE77 /* Pods */,
 				3FF09388BDFADD3BE3CEC5EB /* Frameworks */,
@@ -179,25 +153,6 @@
 			path = trader;
 			sourceTree = "<group>";
 		};
-		F10B40542420E85D00E1080B /* traderTests */ = {
-			isa = PBXGroup;
-			children = (
-				F127C31A2424F9EB00291C7F /* KeychainTests.swift */,
-				F10B40552420E85D00E1080B /* traderTests.swift */,
-				F10B40572420E85D00E1080B /* Info.plist */,
-			);
-			path = traderTests;
-			sourceTree = "<group>";
-		};
-		F10B405F2420E85D00E1080B /* traderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F10B40602420E85D00E1080B /* traderUITests.swift */,
-				F10B40622420E85D00E1080B /* Info.plist */,
-			);
-			path = traderUITests;
-			sourceTree = "<group>";
-		};
 		F10B406E2420E8A500E1080B /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				F1A0DFF9242209D7007F26E1 /* Localization */,
-				F1697FFD242130AA00774568 /* Google plists */,
 				F18643082420FD0A00E7B01A /* Templates */,
 				F10B40472420E85D00E1080B /* Assets.xcassets */,
 				F10B404C2420E85D00E1080B /* Info.plist */,
@@ -236,15 +190,6 @@
 				F10B40492420E85D00E1080B /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		F1697FFD242130AA00774568 /* Google plists */ = {
-			isa = PBXGroup;
-			children = (
-				F1697FFE242130D000774568 /* GoogleService-Info.plist */,
-				F16980002421360A00774568 /* GoogleService-Info-Dev.plist */,
-			);
-			path = "Google plists";
 			sourceTree = "<group>";
 		};
 		F169800324213DC300774568 /* Core */ = {
@@ -348,7 +293,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F10B40682420E85D00E1080B /* Build configuration list for PBXNativeTarget "traderTests" */;
 			buildPhases = (
-				77DE0D04CA064D90E455BCEC /* [CP] Check Pods Manifest.lock */,
 				F10B404D2420E85D00E1080B /* Sources */,
 				F10B404E2420E85D00E1080B /* Frameworks */,
 				F10B404F2420E85D00E1080B /* Resources */,
@@ -389,7 +333,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = Teamvoy;
+				ORGANIZATIONNAME = Soprano;
 				TargetAttributes = {
 					F10B403A2420E85C00E1080B = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -431,10 +375,8 @@
 			files = (
 				F186430A2420FD3200E7B01A /* Configs.stencil in Resources */,
 				F1A0DFFC24220B54007F26E1 /* Localizable.strings in Resources */,
-				F16980012421360A00774568 /* GoogleService-Info-Dev.plist in Resources */,
 				F1CBFAB82423646900FD4F2E /* Errors.strings in Resources */,
 				F10B404B2420E85D00E1080B /* LaunchScreen.storyboard in Resources */,
-				F1697FFF242130D000774568 /* GoogleService-Info.plist in Resources */,
 				F10B40482420E85D00E1080B /* Assets.xcassets in Resources */,
 				F10B40462420E85C00E1080B /* Main.storyboard in Resources */,
 			);
@@ -473,28 +415,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-trader-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		77DE0D04CA064D90E455BCEC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-traderTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -582,8 +502,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F10B40562420E85D00E1080B /* traderTests.swift in Sources */,
-				F127C31B2424F9EB00291C7F /* KeychainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,7 +509,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F10B40612420E85D00E1080B /* traderUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,7 +715,6 @@
 		};
 		F10B40692420E85D00E1080B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A62C80115D57655A8EE945F /* Pods-traderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -821,7 +737,6 @@
 		};
 		F10B406A2420E85D00E1080B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78A314B0A4C86030B0715CF9 /* Pods-traderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -964,7 +879,6 @@
 		};
 		F10B40742420F31300E1080B /* Debug-Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E1F609CAEA3670ABBE8F71B /* Pods-traderTests.debug-staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1082,7 +996,6 @@
 		};
 		F18643002420F42A00E7B01A /* Release-Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EF74DE7B71ABBE985AC8823 /* Pods-traderTests.release-staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

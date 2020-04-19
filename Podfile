@@ -2,10 +2,6 @@ platform :ios, '12.0'
 use_modular_headers!
 inhibit_all_warnings!
 
-def core
-  pod 'Core', :git => 'https://hub.teamvoy.com/mobile/awesome-ios', :branch => 'mercury'
-end
-
 def pods
   pod 'Dip'
   pod 'KeychainAccess'
@@ -16,12 +12,6 @@ def pods
 end
 
 target 'trader' do
-  core
-  pods
-end
-
-target 'traderTests' do
-  core
   pods
 end
 

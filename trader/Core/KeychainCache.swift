@@ -3,11 +3,19 @@
 //  trader
 //
 //  Created by Svyatoslav Katola on 19.03.2020.
-//  Copyright © 2020 Teamvoy. All rights reserved.
+//  Copyright © 2020 Soprano. All rights reserved.
 //
 
-import Core
 import KeychainAccess
+
+protocol KeyedCache {
+    
+    func get<T>(_ type: T.Type, forKey key: String) -> T? where T: Decodable
+    func set<T>(_ value: T?, forKey key: String) where T: Encodable
+    
+    func removeAll()
+    func remove(forKey key: String)
+}
 
 class KeychainCache {
     

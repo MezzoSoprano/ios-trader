@@ -3,10 +3,10 @@
 //  trader
 //
 //  Created by Svyatoslav Katola on 19.03.2020.
-//  Copyright © 2020 Teamvoy. All rights reserved.
+//  Copyright © 2020 Soprano. All rights reserved.
 //
 
-import Core
+//import Core
 import Dip
 import Foundation
 import KeychainAccess

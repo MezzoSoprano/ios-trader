@@ -18,3 +18,4 @@ FASTLANE_ITC_TEAM_ID = 119551071
 FASTLANE_CERTIFICATES_GIT_URL = git@ssh.hub.teamvoy.com:mobile/certificates.git
 FASTLANE_CERTIFICATES_GIT_BRANCH = trader_production
 FASTLANE_SLACK_URL = hooks.slack.com/services/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
+
