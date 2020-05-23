@@ -9,6 +9,7 @@ def pods
   pod 'Sourcery'
   pod 'SwiftGen'
   pod 'SwiftLint'
+  pod 'Firebase/Analytics'
 end
 
 target 'trader' do
