@@ -24,6 +24,12 @@ extension DependencyContainer: ServicesContainer {
 extension DependencyContainer {
     
     static func services() -> DependencyContainer {
-        return .init()
+        let container = DependencyContainer()
+        
+        container.register(.singleton) { () -> AuthService in
+            return AuthServiceImpl(fauth: try! container.resolve())
+        }
+        
+        return container
     }
 }

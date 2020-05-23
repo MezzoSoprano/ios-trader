@@ -11,13 +11,23 @@ import UIKit
 
 protocol UIContainer {
     
-    func root() -> UIViewController
+    func root() -> RootViewController
+    func main() -> MainViewController
+    func auth() -> BaseAuthViewController
 }
 
 // swiftlint:disable force_try
 extension DependencyContainer: UIContainer {
     
-    func root() -> UIViewController {
+    func main() -> MainViewController {
+        return try! resolve() as MainViewController
+    }
+    
+    func auth() -> BaseAuthViewController {
+        return try! resolve() as BaseAuthViewController
+    }
+    
+    func root() -> RootViewController {
         return try! resolve() as RootViewController
     }
 }
@@ -27,8 +37,21 @@ extension DependencyContainer {
     static func ui() -> DependencyContainer {
         let container = DependencyContainer()
         
+        container.register { () -> MainViewController in
+            let controller = UIStoryboard.main.instantiateViewController() as MainViewController
+            controller.authService = try! container.resolve()
+            return controller
+        }
+        
+        container.register { () -> BaseAuthViewController in
+            let controller = UIStoryboard.main.instantiateViewController() as BaseAuthViewController
+            controller.fauth = try! container.resolve()
+            return controller
+        }
+        
         container.register { () -> RootViewController in
             let controller = UIStoryboard.main.instantiateViewController() as RootViewController
+            controller.authService = try! container.resolve()
             return controller
         }
         

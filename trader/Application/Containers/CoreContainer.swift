@@ -10,14 +10,20 @@
 import Dip
 import Foundation
 import KeychainAccess
+import FirebaseUI
 
 protocol CoreContainer {
     
     func keychain() -> KeyedCache
+    func firebaseAuth() -> FUIAuth
 }
 
 // swiftlint:disable force_try
 extension DependencyContainer: CoreContainer {
+        
+    func firebaseAuth() -> FUIAuth {
+        return try! resolve() as FUIAuth
+    }
     
     func keychain() -> KeyedCache {
         return try! resolve() as KeyedCache
@@ -44,6 +50,14 @@ extension DependencyContainer {
                                       decoder: try container.resolve(),
                                       encoder: try container.resolve())
             return cache as KeyedCache
+        }
+        
+        container.register(.singleton) { () -> FUIAuth in
+            return .defaultAuthUI()!
+        }
+        
+        container.register(.singleton) { () -> Auth in
+            return .auth()
         }
         
         return container
