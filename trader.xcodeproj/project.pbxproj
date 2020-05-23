@@ -25,6 +25,8 @@
 		F1CBFAC12423A26E00FD4F2E /* ServicesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAC02423A26E00FD4F2E /* ServicesContainer.swift */; };
 		F1CBFAC52423B6C700FD4F2E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAC42423B6C700FD4F2E /* RootViewController.swift */; };
 		F1CBFAC82423C0D000FD4F2E /* KeychainCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */; };
+		F1EAB8772479859B006C2590 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F1EAB8752479859B006C2590 /* Production.xcconfig */; };
+		F1EAB8782479859B006C2590 /* Example.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F1EAB8762479859B006C2590 /* Example.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +62,7 @@
 		F10B405C2420E85D00E1080B /* traderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = traderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1563F952421091600586781 /* Configs.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.generated.swift; sourceTree = "<group>"; };
 		F169800424213DD900774568 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
-		F18643032420F54400E7B01A /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		F18643042420F56300E7B01A /* Example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Example.xcconfig; sourceTree = "<group>"; };
-		F18643052420F57C00E7B01A /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		F18643092420FD3200E7B01A /* Configs.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Configs.stencil; sourceTree = "<group>"; };
 		F1A0DFFD24220B54007F26E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F1A0DFFF24220C4E007F26E1 /* LocalizedStrings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.generated.swift; sourceTree = "<group>"; };
@@ -74,6 +74,8 @@
 		F1CBFAC02423A26E00FD4F2E /* ServicesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesContainer.swift; sourceTree = "<group>"; };
 		F1CBFAC42423B6C700FD4F2E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCache.swift; sourceTree = "<group>"; };
+		F1EAB8752479859B006C2590 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		F1EAB8762479859B006C2590 /* Example.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Example.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,9 +207,9 @@
 		F18643022420F51200E7B01A /* Configs */ = {
 			isa = PBXGroup;
 			children = (
-				F18643032420F54400E7B01A /* Staging.xcconfig */,
+				F1EAB8762479859B006C2590 /* Example.xcconfig */,
+				F1EAB8752479859B006C2590 /* Production.xcconfig */,
 				F18643042420F56300E7B01A /* Example.xcconfig */,
-				F18643052420F57C00E7B01A /* Production.xcconfig */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -375,6 +377,8 @@
 			files = (
 				F186430A2420FD3200E7B01A /* Configs.stencil in Resources */,
 				F1A0DFFC24220B54007F26E1 /* Localizable.strings in Resources */,
+				F1EAB8772479859B006C2590 /* Production.xcconfig in Resources */,
+				F1EAB8782479859B006C2590 /* Example.xcconfig in Resources */,
 				F1CBFAB82423646900FD4F2E /* Errors.strings in Resources */,
 				F10B404B2420E85D00E1080B /* LaunchScreen.storyboard in Resources */,
 				F10B40482420E85D00E1080B /* Assets.xcassets in Resources */,
@@ -557,7 +561,6 @@
 /* Begin XCBuildConfiguration section */
 		F10B40632420E85D00E1080B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F18643052420F57C00E7B01A /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -620,7 +623,6 @@
 		};
 		F10B40642420E85D00E1080B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F18643052420F57C00E7B01A /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -797,7 +799,6 @@
 		};
 		F10B40722420F31300E1080B /* Debug-Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F18643032420F54400E7B01A /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -920,7 +921,6 @@
 		};
 		F18642FE2420F42A00E7B01A /* Release-Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F18643032420F54400E7B01A /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
