@@ -49,10 +49,14 @@ extension DependencyContainer {
             let controllers = [
                 try container.resolve() as DashboardViewController,
                 try container.resolve() as BotsViewController,
-                try container.resolve() as ProfileViewController
+                try container.resolve() as SettingsViewController
             ]
             
-            controller.viewControllers = controllers.map(UINavigationController.init)
+            controller.viewControllers = controllers.map {
+                let navController = UINavigationController(rootViewController: $0)
+                navController.navigationBar.prefersLargeTitles = true
+                return navController
+            }
             controller.selectedIndex = 2
             
             return controller
@@ -64,8 +68,8 @@ extension DependencyContainer {
             return controller
         }
         
-        container.register { () -> ProfileViewController in
-            let controller = UIStoryboard.flows.instantiateViewController() as ProfileViewController
+        container.register { () -> SettingsViewController in
+            let controller = UIStoryboard.flows.instantiateViewController() as SettingsViewController
             controller.authService = try! container.resolve()
             controller.tabBarItem.image = #imageLiteral(resourceName: "icon_user")
             return controller
