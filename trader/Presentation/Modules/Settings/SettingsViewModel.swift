@@ -26,6 +26,12 @@ enum Settings: String {
     }
     
     static var all: [Settings] = [.advanced, .profile]
+    
+    static func item(for indexPath: IndexPath) -> SettingsItemViewModel {
+        return Settings
+            .init(index: indexPath.section)
+            .items[indexPath.row]
+    }
 }
 
 enum SettingsItemViewModel: String {

@@ -21,12 +21,7 @@ class SettingsViewController: UITableViewController {
 
 extension SettingsViewController {
     
-    private func configureNavBar() {
-        navigationItem.rightBarButtonItem = .init(title: "Sign out", style: .plain,
-                                                  target: self, action: #selector(signOut))
-    }
-    
-    @objc func signOut() {
+    func signOut() {
         authService
             .signOut()
             .subscribe(onError: { [weak self] in self?.presentAlert(with: $0.localizedDescription) })
@@ -39,7 +34,7 @@ extension SettingsViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         Settings.all.count
     }
-        
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return Settings.init(index: section).rawValue
     }
@@ -61,5 +56,9 @@ extension SettingsViewController {
             cell.textLabel?.text = item.rawValue
             return cell
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Settings.item(for: indexPath) == .signOut ? signOut() : ()
     }
 }
