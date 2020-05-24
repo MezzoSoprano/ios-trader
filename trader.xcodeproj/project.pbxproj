@@ -17,11 +17,14 @@
 		F186430A2420FD3200E7B01A /* Configs.stencil in Resources */ = {isa = PBXBuildFile; fileRef = F18643092420FD3200E7B01A /* Configs.stencil */; };
 		F1A0DFFC24220B54007F26E1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1A0DFFE24220B54007F26E1 /* Localizable.strings */; };
 		F1A0E00024220C4E007F26E1 /* LocalizedStrings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A0DFFF24220C4E007F26E1 /* LocalizedStrings.generated.swift */; };
-		F1C327F32479B328008A6D95 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C327F22479B328008A6D95 /* MainViewController.swift */; };
 		F1C327F62479B408008A6D95 /* BaseAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C327F52479B408008A6D95 /* BaseAuthViewController.swift */; };
 		F1C327FA2479CF10008A6D95 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C327F92479CF10008A6D95 /* AuthService.swift */; };
 		F1C327FC2479CF1A008A6D95 /* AuthServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C327FB2479CF1A008A6D95 /* AuthServiceImpl.swift */; };
 		F1C327FF2479D413008A6D95 /* RxSwift+AnyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C327FE2479D413008A6D95 /* RxSwift+AnyObject.swift */; };
+		F1C32804247ABC5B008A6D95 /* BotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32803247ABC5B008A6D95 /* BotsViewController.swift */; };
+		F1C32807247ABD2F008A6D95 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32806247ABD2F008A6D95 /* DashboardViewController.swift */; };
+		F1C32809247ABD93008A6D95 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32808247ABD93008A6D95 /* ProfileViewController.swift */; };
+		F1C3280B247ABED8008A6D95 /* Flows.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C3280A247ABED8008A6D95 /* Flows.storyboard */; };
 		F1CBFAB62423643400FD4F2E /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAB52423643400FD4F2E /* Localization.swift */; };
 		F1CBFAB82423646900FD4F2E /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1CBFAB72423646900FD4F2E /* Errors.strings */; };
 		F1CBFABB24239F2E00FD4F2E /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFABA24239F2E00FD4F2E /* Assembly.swift */; };
@@ -71,11 +74,14 @@
 		F18643092420FD3200E7B01A /* Configs.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Configs.stencil; sourceTree = "<group>"; };
 		F1A0DFFD24220B54007F26E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F1A0DFFF24220C4E007F26E1 /* LocalizedStrings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.generated.swift; sourceTree = "<group>"; };
-		F1C327F22479B328008A6D95 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F1C327F52479B408008A6D95 /* BaseAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthViewController.swift; sourceTree = "<group>"; };
 		F1C327F92479CF10008A6D95 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F1C327FB2479CF1A008A6D95 /* AuthServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceImpl.swift; sourceTree = "<group>"; };
 		F1C327FE2479D413008A6D95 /* RxSwift+AnyObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+AnyObject.swift"; sourceTree = "<group>"; };
+		F1C32803247ABC5B008A6D95 /* BotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotsViewController.swift; sourceTree = "<group>"; };
+		F1C32806247ABD2F008A6D95 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		F1C32808247ABD93008A6D95 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F1C3280A247ABED8008A6D95 /* Flows.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Flows.storyboard; sourceTree = "<group>"; };
 		F1CBFAB52423643400FD4F2E /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		F1CBFAB72423646900FD4F2E /* Errors.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Errors.strings; sourceTree = "<group>"; };
 		F1CBFABA24239F2E00FD4F2E /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				F10B40442420E85C00E1080B /* Main.storyboard */,
+				F1C3280A247ABED8008A6D95 /* Flows.storyboard */,
 				F10B40492420E85D00E1080B /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -255,14 +262,6 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		F1C327F12479B306008A6D95 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				F1C327F22479B328008A6D95 /* MainViewController.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		F1C327F42479B389008A6D95 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +295,30 @@
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
+		F1C32800247ABB45008A6D95 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F1C32808247ABD93008A6D95 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F1C32801247ABB5F008A6D95 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				F1C32806247ABD2F008A6D95 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		F1C32802247ABBC8008A6D95 /* Bots */ = {
+			isa = PBXGroup;
+			children = (
+				F1C32803247ABC5B008A6D95 /* BotsViewController.swift */,
+			);
+			path = Bots;
+			sourceTree = "<group>";
+		};
 		F1CBFAB924239ED900FD4F2E /* Containers */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,8 +334,10 @@
 			isa = PBXGroup;
 			children = (
 				F1CBFAC32423B6AD00FD4F2E /* Application */,
-				F1C327F12479B306008A6D95 /* Main */,
 				F1C327F42479B389008A6D95 /* Authorization */,
+				F1C32802247ABBC8008A6D95 /* Bots */,
+				F1C32801247ABB5F008A6D95 /* Dashboard */,
+				F1C32800247ABB45008A6D95 /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -453,6 +478,7 @@
 			files = (
 				F186430A2420FD3200E7B01A /* Configs.stencil in Resources */,
 				F1A0DFFC24220B54007F26E1 /* Localizable.strings in Resources */,
+				F1C3280B247ABED8008A6D95 /* Flows.storyboard in Resources */,
 				F1EAB87A2479868D006C2590 /* GoogleService-Info.plist in Resources */,
 				F1CBFAB82423646900FD4F2E /* Errors.strings in Resources */,
 				F10B404B2420E85D00E1080B /* LaunchScreen.storyboard in Resources */,
@@ -580,8 +606,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C32807247ABD2F008A6D95 /* DashboardViewController.swift in Sources */,
 				F1CBFAC52423B6C700FD4F2E /* RootViewController.swift in Sources */,
-				F1C327F32479B328008A6D95 /* MainViewController.swift in Sources */,
+				F1C32809247ABD93008A6D95 /* ProfileViewController.swift in Sources */,
 				F1A0E00024220C4E007F26E1 /* LocalizedStrings.generated.swift in Sources */,
 				F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */,
 				F1563F962421091600586781 /* Configs.generated.swift in Sources */,
@@ -596,6 +623,7 @@
 				F1C327FA2479CF10008A6D95 /* AuthService.swift in Sources */,
 				F169800524213DD900774568 /* Analytics.swift in Sources */,
 				F1C327F62479B408008A6D95 /* BaseAuthViewController.swift in Sources */,
+				F1C32804247ABC5B008A6D95 /* BotsViewController.swift in Sources */,
 				F1C327FF2479D413008A6D95 /* RxSwift+AnyObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -36,7 +36,6 @@ extension RootViewController {
     }
     
     private func presentMain() {
-        let controller = UINavigationController(rootViewController: assembly.ui.main())
-        set(controller, animated: true)
+        set(assembly.ui.main(), animated: true)
     }
 }

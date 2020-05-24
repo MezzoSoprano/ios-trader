@@ -1,14 +1,14 @@
 //
-//  MainViewController.swift
+//  ProfileViewController.swift
 //  trader
 //
-//  Created by Svyatoslav Katola on 23.05.2020.
+//  Created by Svyatoslav Katola on 24.05.2020.
 //  Copyright © 2020 Soprano. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +19,11 @@ class MainViewController: UIViewController {
     var authService: AuthService!
 }
 
-extension MainViewController {
+extension ProfileViewController {
     
     private func configureNavBar() {
         navigationItem.rightBarButtonItem = .init(title: "Sign out", style: .plain,
-                                                 target: self, action: #selector(signOut))
+                                                  target: self, action: #selector(signOut))
     }
     
     @objc func signOut() {
