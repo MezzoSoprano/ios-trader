@@ -40,6 +40,8 @@
 		F1CBFAC12423A26E00FD4F2E /* ServicesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAC02423A26E00FD4F2E /* ServicesContainer.swift */; };
 		F1CBFAC52423B6C700FD4F2E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAC42423B6C700FD4F2E /* RootViewController.swift */; };
 		F1CBFAC82423C0D000FD4F2E /* KeychainCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */; };
+		F1D004C1247BEEDF00EBEFE8 /* LinkExchangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D004C0247BEEDF00EBEFE8 /* LinkExchangesViewController.swift */; };
+		F1D004C3247BF6CF00EBEFE8 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D004C2247BF6CF00EBEFE8 /* Exchange.swift */; };
 		F1EAB87A2479868D006C2590 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1EAB8792479868D006C2590 /* GoogleService-Info.plist */; };
 		F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAB87D247992E5006C2590 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
@@ -104,6 +106,8 @@
 		F1CBFAC02423A26E00FD4F2E /* ServicesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesContainer.swift; sourceTree = "<group>"; };
 		F1CBFAC42423B6C700FD4F2E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCache.swift; sourceTree = "<group>"; };
+		F1D004C0247BEEDF00EBEFE8 /* LinkExchangesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExchangesViewController.swift; sourceTree = "<group>"; };
+		F1D004C2247BF6CF00EBEFE8 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
 		F1EAB8752479859B006C2590 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		F1EAB8762479859B006C2590 /* Example.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Example.xcconfig; sourceTree = "<group>"; };
 		F1EAB8792479868D006C2590 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -178,11 +182,11 @@
 		F10B403D2420E85C00E1080B /* trader */ = {
 			isa = PBXGroup;
 			children = (
-				F1C32831247B40E5008A6D95 /* Model */,
 				F18643022420F51200E7B01A /* Configs */,
 				F10B40702420E8EB00E1080B /* Presentation */,
 				F1EAB87B247992D2006C2590 /* Extensions */,
 				F169800324213DC300774568 /* Core */,
+				F1C32831247B40E5008A6D95 /* Model */,
 				F1C327F72479CEE6008A6D95 /* Services */,
 				F10B406E2420E8A500E1080B /* Application */,
 				F10B406F2420E8B600E1080B /* Resources */,
@@ -334,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				F1C32803247ABC5B008A6D95 /* BotsViewController.swift */,
+				F1D004C0247BEEDF00EBEFE8 /* LinkExchangesViewController.swift */,
 			);
 			path = Bots;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				F1C32832247B40F5008A6D95 /* User.swift */,
+				F1D004C2247BF6CF00EBEFE8 /* Exchange.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -665,6 +671,7 @@
 				F1A0E00024220C4E007F26E1 /* LocalizedStrings.generated.swift in Sources */,
 				F1C32838247B4896008A6D95 /* ExchangeServiceImpl.swift in Sources */,
 				F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */,
+				F1D004C1247BEEDF00EBEFE8 /* LinkExchangesViewController.swift in Sources */,
 				F1563F962421091600586781 /* Configs.generated.swift in Sources */,
 				F1C327FC2479CF1A008A6D95 /* AuthServiceImpl.swift in Sources */,
 				F1CBFABD24239F3F00FD4F2E /* CoreContainer.swift in Sources */,
@@ -678,6 +685,7 @@
 				F169800524213DD900774568 /* Analytics.swift in Sources */,
 				F1C327F62479B408008A6D95 /* BaseAuthViewController.swift in Sources */,
 				F1C3282A247AF50D008A6D95 /* SwitchTableViewCell.swift in Sources */,
+				F1D004C3247BF6CF00EBEFE8 /* Exchange.swift in Sources */,
 				F1C32830247B2999008A6D95 /* DatabaseClient.swift in Sources */,
 				F1C32804247ABC5B008A6D95 /* BotsViewController.swift in Sources */,
 				F1C32833247B40F5008A6D95 /* User.swift in Sources */,

@@ -15,3 +15,11 @@ class BotsViewController: UIViewController {
         
     }
 }
+
+extension BotsViewController {
+    
+    @IBAction func createBot(_ sender: Any) {
+        let controller = assembly.ui.linkExchange { _ in () }
+        present(controller, animated: true)
+    }
+}

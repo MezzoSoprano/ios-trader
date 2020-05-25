@@ -14,6 +14,7 @@ protocol UIContainer {
     func root() -> UIViewController
     func auth() -> UIViewController
     func main() -> UIViewController
+    func linkExchange(onSelect: @escaping Handler<Exchange>) -> UIViewController
 }
 
 // swiftlint:disable force_try
@@ -30,6 +31,10 @@ extension DependencyContainer: UIContainer {
     func root() -> UIViewController {
         return try! resolve() as RootViewController
     }
+    
+    func linkExchange(onSelect: @escaping Handler<Exchange>) -> UIViewController {
+        return try! resolve(arguments: onSelect) as ExchangesViewController
+    }
 }
 
 extension DependencyContainer {
@@ -45,6 +50,7 @@ extension DependencyContainer {
         
         container.register { () -> UITabBarController in
             let controller = UITabBarController()
+            controller.tabBar.tintColor = .systemYellow
             
             let controllers = [
                 try container.resolve() as DashboardViewController,
@@ -65,7 +71,6 @@ extension DependencyContainer {
         container.register { () -> DashboardViewController in
             let controller = UIStoryboard.flows.instantiateViewController() as DashboardViewController
             controller.tabBarItem.image = #imageLiteral(resourceName: "icon_dashboard")
-            controller.exchangeService = try! container.resolve()
             return controller
         }
         
@@ -85,6 +90,13 @@ extension DependencyContainer {
         container.register { () -> BaseAuthViewController in
             let controller = UIStoryboard.flows.instantiateViewController() as BaseAuthViewController
             controller.fauth = try! container.resolve()
+            return controller
+        }
+        
+        container.register { (onSelect: @escaping Handler<Exchange>) -> ExchangesViewController in
+            let controller = UIStoryboard.flows.instantiateViewController() as ExchangesViewController
+            controller.exchangeService = try! container.resolve()
+            controller.onSelect = onSelect
             return controller
         }
         
