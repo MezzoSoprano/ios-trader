@@ -6,6 +6,7 @@
 //  Copyright © 2020 Soprano. All rights reserved.
 //
 
+import Firebase
 import Logging
 
 protocol AnalyticsService {
@@ -19,11 +20,16 @@ enum Analytics: AnalyticsService {
         services.forEach { $0.setup() }
     }
     
-    #if DEBUG
-    static let services: [AnalyticsService.Type] = [Logger.self]
-    #else
-    static let services: [AnalyticsService.Type] = []
-    #endif
+    static let services: [AnalyticsService.Type] = [Logger.self, FirebaseApp.self]
+}
+
+// MARK: - Firebase
+
+extension FirebaseApp: AnalyticsService {
+    
+    static func setup() {
+        FirebaseApp.configure()
+    }
 }
 
 // MARK: - Logger

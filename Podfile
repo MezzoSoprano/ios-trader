@@ -9,6 +9,12 @@ def pods
   pod 'Sourcery'
   pod 'SwiftGen'
   pod 'SwiftLint'
+  pod 'RxSwift'
+  pod 'SwiftyJSON'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Email'
+  pod 'FirebaseUI/Google'
+  pod 'Firebase/Database'
 end
 
 target 'trader' do
