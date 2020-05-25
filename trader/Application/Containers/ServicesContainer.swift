@@ -27,7 +27,12 @@ extension DependencyContainer {
         let container = DependencyContainer()
         
         container.register(.singleton) { () -> AuthService in
-            return AuthServiceImpl(fauth: try! container.resolve())
+            return AuthServiceImpl(fauth: try! container.resolve(),
+                                   client: try! container.resolve())
+        }
+        
+        container.register(.singleton) { () -> ExchangeService in
+            return ExchangeServiceImpl(client: try! container.resolve())
         }
         
         return container

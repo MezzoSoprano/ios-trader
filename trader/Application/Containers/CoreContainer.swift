@@ -11,6 +11,7 @@ import Dip
 import Foundation
 import KeychainAccess
 import FirebaseUI
+import FirebaseDatabase
 
 protocol CoreContainer {
     
@@ -58,6 +59,14 @@ extension DependencyContainer {
         
         container.register(.singleton) { () -> Auth in
             return .auth()
+        }
+        
+        container.register(.singleton) { () -> DatabaseReference in
+            return Database.database().reference()
+        }
+        
+        container.register(.singleton) { () -> DatabaseClient in
+            return FirebaseDatabaseClient(database: try container.resolve())
         }
         
         return container

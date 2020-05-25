@@ -65,6 +65,7 @@ extension DependencyContainer {
         container.register { () -> DashboardViewController in
             let controller = UIStoryboard.flows.instantiateViewController() as DashboardViewController
             controller.tabBarItem.image = #imageLiteral(resourceName: "icon_dashboard")
+            controller.exchangeService = try! container.resolve()
             return controller
         }
         

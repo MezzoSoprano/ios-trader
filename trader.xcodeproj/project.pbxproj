@@ -28,6 +28,10 @@
 		F1C3282A247AF50D008A6D95 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32829247AF50D008A6D95 /* SwitchTableViewCell.swift */; };
 		F1C3282C247AFBD8008A6D95 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3282B247AFBD8008A6D95 /* UITableView.swift */; };
 		F1C3282E247AFD86008A6D95 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3282D247AFD86008A6D95 /* SettingsViewModel.swift */; };
+		F1C32830247B2999008A6D95 /* DatabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3282F247B2999008A6D95 /* DatabaseClient.swift */; };
+		F1C32833247B40F5008A6D95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32832247B40F5008A6D95 /* User.swift */; };
+		F1C32836247B4856008A6D95 /* ExchangesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32835247B4856008A6D95 /* ExchangesService.swift */; };
+		F1C32838247B4896008A6D95 /* ExchangeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32837247B4896008A6D95 /* ExchangeServiceImpl.swift */; };
 		F1CBFAB62423643400FD4F2E /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAB52423643400FD4F2E /* Localization.swift */; };
 		F1CBFAB82423646900FD4F2E /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1CBFAB72423646900FD4F2E /* Errors.strings */; };
 		F1CBFABB24239F2E00FD4F2E /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFABA24239F2E00FD4F2E /* Assembly.swift */; };
@@ -88,6 +92,10 @@
 		F1C32829247AF50D008A6D95 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		F1C3282B247AFBD8008A6D95 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		F1C3282D247AFD86008A6D95 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		F1C3282F247B2999008A6D95 /* DatabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseClient.swift; sourceTree = "<group>"; };
+		F1C32832247B40F5008A6D95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F1C32835247B4856008A6D95 /* ExchangesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesService.swift; sourceTree = "<group>"; };
+		F1C32837247B4896008A6D95 /* ExchangeServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeServiceImpl.swift; sourceTree = "<group>"; };
 		F1CBFAB52423643400FD4F2E /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		F1CBFAB72423646900FD4F2E /* Errors.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Errors.strings; sourceTree = "<group>"; };
 		F1CBFABA24239F2E00FD4F2E /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
@@ -170,6 +178,7 @@
 		F10B403D2420E85C00E1080B /* trader */ = {
 			isa = PBXGroup;
 			children = (
+				F1C32831247B40E5008A6D95 /* Model */,
 				F18643022420F51200E7B01A /* Configs */,
 				F10B40702420E8EB00E1080B /* Presentation */,
 				F1EAB87B247992D2006C2590 /* Extensions */,
@@ -229,6 +238,7 @@
 				F169800424213DD900774568 /* Analytics.swift */,
 				F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */,
 				F1CBFAB52423643400FD4F2E /* Localization.swift */,
+				F1C3282F247B2999008A6D95 /* DatabaseClient.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -280,6 +290,7 @@
 		F1C327F72479CEE6008A6D95 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F1C32834247B4848008A6D95 /* Exchanges */,
 				F1C327F82479CF04008A6D95 /* Auth */,
 			);
 			path = Services;
@@ -341,6 +352,23 @@
 				F1C32829247AF50D008A6D95 /* SwitchTableViewCell.swift */,
 			);
 			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		F1C32831247B40E5008A6D95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1C32832247B40F5008A6D95 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1C32834247B4848008A6D95 /* Exchanges */ = {
+			isa = PBXGroup;
+			children = (
+				F1C32835247B4856008A6D95 /* ExchangesService.swift */,
+				F1C32837247B4896008A6D95 /* ExchangeServiceImpl.swift */,
+			);
+			path = Exchanges;
 			sourceTree = "<group>";
 		};
 		F1CBFAB924239ED900FD4F2E /* Containers */ = {
@@ -635,6 +663,7 @@
 				F1CBFAC52423B6C700FD4F2E /* RootViewController.swift in Sources */,
 				F1C32809247ABD93008A6D95 /* SettingsViewController.swift in Sources */,
 				F1A0E00024220C4E007F26E1 /* LocalizedStrings.generated.swift in Sources */,
+				F1C32838247B4896008A6D95 /* ExchangeServiceImpl.swift in Sources */,
 				F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */,
 				F1563F962421091600586781 /* Configs.generated.swift in Sources */,
 				F1C327FC2479CF1A008A6D95 /* AuthServiceImpl.swift in Sources */,
@@ -649,10 +678,13 @@
 				F169800524213DD900774568 /* Analytics.swift in Sources */,
 				F1C327F62479B408008A6D95 /* BaseAuthViewController.swift in Sources */,
 				F1C3282A247AF50D008A6D95 /* SwitchTableViewCell.swift in Sources */,
+				F1C32830247B2999008A6D95 /* DatabaseClient.swift in Sources */,
 				F1C32804247ABC5B008A6D95 /* BotsViewController.swift in Sources */,
+				F1C32833247B40F5008A6D95 /* User.swift in Sources */,
 				F1C3282E247AFD86008A6D95 /* SettingsViewModel.swift in Sources */,
 				F1C327FF2479D413008A6D95 /* RxSwift+AnyObject.swift in Sources */,
 				F1C3282C247AFBD8008A6D95 /* UITableView.swift in Sources */,
+				F1C32836247B4856008A6D95 /* ExchangesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

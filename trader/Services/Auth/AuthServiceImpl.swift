@@ -8,24 +8,32 @@
 
 import RxSwift
 import FirebaseAuth
+import FirebaseDatabase
 
 class AuthServiceImpl {
+    
     let fauth: Auth
-
-    init(fauth: Auth) {
+    let client: DatabaseClient
+    
+    init(fauth: Auth,
+         client: DatabaseClient) {
         self.fauth = fauth
+        self.client = client
     }
+    
+    private let disposeBag = DisposeBag()
 }
 
 extension AuthServiceImpl: AuthService {
     
     func sessionUpdates() -> Observable<User?> {
-        return Observable.create { [weak self] observer in
-            let handler = self?.fauth.addStateDidChangeListener { _, user in
+        return Observable.create { [unowned self] observer in
+            let handler = self.fauth.addStateDidChangeListener { _, user in
                 observer.onNext(user)
+                user.map(self.saveToDatabase(user:))
             }
             
-            return Disposables.create { self?.fauth.removeStateDidChangeListener(handler!) }
+            return Disposables.create { self.fauth.removeStateDidChangeListener(handler) }
         }
     }
     
@@ -40,5 +48,11 @@ extension AuthServiceImpl: AuthService {
             observer(.success(()))
             return Disposables.create()
         }
+    }
+    
+    private func saveToDatabase(user: User) {
+        client.update(route: .users, id: user.uid, value: UserM(from: user))
+            .subscribe()
+            .disposed(by: disposeBag)
     }
 }

@@ -13,5 +13,11 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        exchangeService
+            .availableExchanges()
+            .subscribe { print($0) }
+            .disposed(by: rx.disposeBag)
     }
+    
+    var exchangeService: ExchangeService!
 }
