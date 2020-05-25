@@ -11,4 +11,5 @@ import RxSwift
 protocol ExchangeService {
     
     func availableExchanges() -> Single<[String]>
+    func link(exchange: Exchange.Link) -> Single<Void>
 }

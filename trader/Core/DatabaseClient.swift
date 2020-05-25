@@ -21,7 +21,8 @@ protocol DatabaseClient {
 
 enum Route: String {
     
-    case users, transactions, exchanges = "available_exchanges"
+    case users, transactions
+    case exchanges = "available_exchanges", linkedExchanges = "linked_exchanges"
 }
 
 final class FirebaseDatabaseClient {
@@ -30,6 +31,13 @@ final class FirebaseDatabaseClient {
     
     init(database: DatabaseReference) {
         self.database = database
+    }
+}
+
+extension DatabaseReference {
+    
+    func child(_ route: Route) -> DatabaseReference{
+        return child(route.rawValue)
     }
 }
 

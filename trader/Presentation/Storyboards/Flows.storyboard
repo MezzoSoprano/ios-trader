@@ -127,6 +127,89 @@
             </objects>
             <point key="canvasLocation" x="2180" y="905"/>
         </scene>
+        <!--Connect-->
+        <scene sceneID="sTh-JH-vKH">
+            <objects>
+                <viewController storyboardIdentifier="LinkExchangeViewController" title="Connect" id="wIT-PI-v4L" customClass="LinkExchangeViewController" customModule="trader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aym-jW-Uo5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="heV-mt-dMs">
+                                <rect key="frame" x="20" y="223" width="374" height="224.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMy-At-qoP">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="API Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qio-bm-eAC">
+                                        <rect key="frame" x="0.0" y="58.5" width="374" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Secret API key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Osg-D0-SLM">
+                                        <rect key="frame" x="0.0" y="117" width="374" height="17.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knw-ef-Ayu">
+                                        <rect key="frame" x="0.0" y="174.5" width="374" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6n9-A4-w8k"/>
+                                        </constraints>
+                                        <state key="normal" title="Link Exchange">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="linkExchange:" destination="wIT-PI-v4L" eventType="touchUpInside" id="sxo-VB-5zS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create API key here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj5-nV-WGW">
+                                <rect key="frame" x="20" y="174.5" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When creating API key make sure to enable trading and reading info options. Do NOT enable wihdrawal option." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSc-95-Xj0">
+                                <rect key="frame" x="20" y="77" width="374" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="heV-mt-dMs" firstAttribute="centerX" secondItem="AdZ-LK-vgZ" secondAttribute="centerX" id="H0T-2V-Ang"/>
+                            <constraint firstItem="Qj5-nV-WGW" firstAttribute="centerX" secondItem="AdZ-LK-vgZ" secondAttribute="centerX" id="dhH-T0-yDX"/>
+                            <constraint firstItem="RSc-95-Xj0" firstAttribute="leading" secondItem="AdZ-LK-vgZ" secondAttribute="leading" constant="20" id="gL4-UN-Ofx"/>
+                            <constraint firstItem="Qj5-nV-WGW" firstAttribute="top" secondItem="RSc-95-Xj0" secondAttribute="bottom" constant="40" id="hHi-mI-Vrt"/>
+                            <constraint firstItem="heV-mt-dMs" firstAttribute="leading" secondItem="AdZ-LK-vgZ" secondAttribute="leading" constant="20" id="hT1-nY-fWg"/>
+                            <constraint firstItem="heV-mt-dMs" firstAttribute="top" secondItem="Qj5-nV-WGW" secondAttribute="bottom" constant="31.5" id="kMh-z4-ynf"/>
+                            <constraint firstItem="Qj5-nV-WGW" firstAttribute="leading" secondItem="AdZ-LK-vgZ" secondAttribute="leading" constant="20" id="n8k-L2-Xeq"/>
+                            <constraint firstItem="RSc-95-Xj0" firstAttribute="top" secondItem="AdZ-LK-vgZ" secondAttribute="top" constant="33" id="xpU-yp-RIX"/>
+                            <constraint firstItem="RSc-95-Xj0" firstAttribute="centerX" secondItem="AdZ-LK-vgZ" secondAttribute="centerX" id="yaS-Td-j2e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AdZ-LK-vgZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="apiKeyLabel" destination="Qio-bm-eAC" id="3s0-pE-3RW"/>
+                        <outlet property="secretApiKeyLabel" destination="Osg-D0-SLM" id="8BO-v4-Bfb"/>
+                        <outlet property="titleLabel" destination="bMy-At-qoP" id="3Mb-CG-rVw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yf7-r5-ZY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2180" y="1702"/>
+        </scene>
         <!--Base Auth View Controller-->
         <scene sceneID="0tZ-an-tBq">
             <objects>

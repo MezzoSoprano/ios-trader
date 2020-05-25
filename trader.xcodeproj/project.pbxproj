@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		48980AAF38527D0A929C177A /* libPods-trader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 131A6E1E917C3948BEE5A788 /* libPods-trader.a */; };
+		F1062722247C668A00701A77 /* ExchangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1062721247C668A00701A77 /* ExchangesViewController.swift */; };
+		F109FB36247C6CDD0041B5A7 /* Exchange+Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = F109FB35247C6CDD0041B5A7 /* Exchange+Link.swift */; };
+		F109FB39247C6E690041B5A7 /* User+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = F109FB38247C6E690041B5A7 /* User+Current.swift */; };
 		F10B403F2420E85C00E1080B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B403E2420E85C00E1080B /* AppDelegate.swift */; };
 		F10B40462420E85C00E1080B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10B40442420E85C00E1080B /* Main.storyboard */; };
 		F10B40482420E85D00E1080B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10B40472420E85D00E1080B /* Assets.xcassets */; };
 		F10B404B2420E85D00E1080B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10B40492420E85D00E1080B /* LaunchScreen.storyboard */; };
 		F1563F962421091600586781 /* Configs.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1563F952421091600586781 /* Configs.generated.swift */; };
 		F169800524213DD900774568 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F169800424213DD900774568 /* Analytics.swift */; };
+		F17B50B5247C673D0093AB1B /* LinkExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B50B4247C673D0093AB1B /* LinkExchangeViewController.swift */; };
 		F186430A2420FD3200E7B01A /* Configs.stencil in Resources */ = {isa = PBXBuildFile; fileRef = F18643092420FD3200E7B01A /* Configs.stencil */; };
 		F1A0DFFC24220B54007F26E1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1A0DFFE24220B54007F26E1 /* Localizable.strings */; };
 		F1A0E00024220C4E007F26E1 /* LocalizedStrings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A0DFFF24220C4E007F26E1 /* LocalizedStrings.generated.swift */; };
@@ -40,7 +44,6 @@
 		F1CBFAC12423A26E00FD4F2E /* ServicesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAC02423A26E00FD4F2E /* ServicesContainer.swift */; };
 		F1CBFAC52423B6C700FD4F2E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAC42423B6C700FD4F2E /* RootViewController.swift */; };
 		F1CBFAC82423C0D000FD4F2E /* KeychainCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */; };
-		F1D004C1247BEEDF00EBEFE8 /* LinkExchangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D004C0247BEEDF00EBEFE8 /* LinkExchangesViewController.swift */; };
 		F1D004C3247BF6CF00EBEFE8 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D004C2247BF6CF00EBEFE8 /* Exchange.swift */; };
 		F1EAB87A2479868D006C2590 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1EAB8792479868D006C2590 /* GoogleService-Info.plist */; };
 		F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAB87D247992E5006C2590 /* UIViewController.swift */; };
@@ -69,6 +72,9 @@
 		ABDB6887AB4B48147EF19CF2 /* Pods-trader.debug-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trader.debug-staging.xcconfig"; path = "Target Support Files/Pods-trader/Pods-trader.debug-staging.xcconfig"; sourceTree = "<group>"; };
 		DDC3D0B558EF7CB1575D1A04 /* Pods-trader.release-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trader.release-staging.xcconfig"; path = "Target Support Files/Pods-trader/Pods-trader.release-staging.xcconfig"; sourceTree = "<group>"; };
 		DE5CC45AA24C374770B0EDF4 /* Pods-trader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trader.release.xcconfig"; path = "Target Support Files/Pods-trader/Pods-trader.release.xcconfig"; sourceTree = "<group>"; };
+		F1062721247C668A00701A77 /* ExchangesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangesViewController.swift; sourceTree = "<group>"; };
+		F109FB35247C6CDD0041B5A7 /* Exchange+Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exchange+Link.swift"; sourceTree = "<group>"; };
+		F109FB38247C6E690041B5A7 /* User+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Current.swift"; sourceTree = "<group>"; };
 		F10B403B2420E85C00E1080B /* trader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10B403E2420E85C00E1080B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F10B40452420E85C00E1080B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 		F10B405C2420E85D00E1080B /* traderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = traderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1563F952421091600586781 /* Configs.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.generated.swift; sourceTree = "<group>"; };
 		F169800424213DD900774568 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		F17B50B4247C673D0093AB1B /* LinkExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExchangeViewController.swift; sourceTree = "<group>"; };
 		F18643042420F56300E7B01A /* Example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Example.xcconfig; sourceTree = "<group>"; };
 		F18643092420FD3200E7B01A /* Configs.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Configs.stencil; sourceTree = "<group>"; };
 		F1A0DFFD24220B54007F26E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -106,7 +113,6 @@
 		F1CBFAC02423A26E00FD4F2E /* ServicesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesContainer.swift; sourceTree = "<group>"; };
 		F1CBFAC42423B6C700FD4F2E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCache.swift; sourceTree = "<group>"; };
-		F1D004C0247BEEDF00EBEFE8 /* LinkExchangesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExchangesViewController.swift; sourceTree = "<group>"; };
 		F1D004C2247BF6CF00EBEFE8 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
 		F1EAB8752479859B006C2590 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		F1EAB8762479859B006C2590 /* Example.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Example.xcconfig; sourceTree = "<group>"; };
@@ -157,6 +163,24 @@
 				DDC3D0B558EF7CB1575D1A04 /* Pods-trader.release-staging.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F109FB34247C6CCA0041B5A7 /* Exchange */ = {
+			isa = PBXGroup;
+			children = (
+				F1D004C2247BF6CF00EBEFE8 /* Exchange.swift */,
+				F109FB35247C6CDD0041B5A7 /* Exchange+Link.swift */,
+			);
+			path = Exchange;
+			sourceTree = "<group>";
+		};
+		F109FB37247C6E5D0041B5A7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F1C32832247B40F5008A6D95 /* User.swift */,
+				F109FB38247C6E690041B5A7 /* User+Current.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		F10B40322420E85C00E1080B = {
@@ -337,8 +361,9 @@
 		F1C32802247ABBC8008A6D95 /* Bots */ = {
 			isa = PBXGroup;
 			children = (
+				F1062721247C668A00701A77 /* ExchangesViewController.swift */,
 				F1C32803247ABC5B008A6D95 /* BotsViewController.swift */,
-				F1D004C0247BEEDF00EBEFE8 /* LinkExchangesViewController.swift */,
+				F17B50B4247C673D0093AB1B /* LinkExchangeViewController.swift */,
 			);
 			path = Bots;
 			sourceTree = "<group>";
@@ -362,8 +387,8 @@
 		F1C32831247B40E5008A6D95 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F1C32832247B40F5008A6D95 /* User.swift */,
-				F1D004C2247BF6CF00EBEFE8 /* Exchange.swift */,
+				F109FB37247C6E5D0041B5A7 /* User */,
+				F109FB34247C6CCA0041B5A7 /* Exchange */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -671,20 +696,23 @@
 				F1A0E00024220C4E007F26E1 /* LocalizedStrings.generated.swift in Sources */,
 				F1C32838247B4896008A6D95 /* ExchangeServiceImpl.swift in Sources */,
 				F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */,
-				F1D004C1247BEEDF00EBEFE8 /* LinkExchangesViewController.swift in Sources */,
 				F1563F962421091600586781 /* Configs.generated.swift in Sources */,
 				F1C327FC2479CF1A008A6D95 /* AuthServiceImpl.swift in Sources */,
+				F17B50B5247C673D0093AB1B /* LinkExchangeViewController.swift in Sources */,
 				F1CBFABD24239F3F00FD4F2E /* CoreContainer.swift in Sources */,
 				F1CBFAB62423643400FD4F2E /* Localization.swift in Sources */,
 				F1CBFABF24239F4B00FD4F2E /* UIContainer.swift in Sources */,
+				F109FB36247C6CDD0041B5A7 /* Exchange+Link.swift in Sources */,
 				F1CBFABB24239F2E00FD4F2E /* Assembly.swift in Sources */,
 				F10B403F2420E85C00E1080B /* AppDelegate.swift in Sources */,
+				F1062722247C668A00701A77 /* ExchangesViewController.swift in Sources */,
 				F1CBFAC12423A26E00FD4F2E /* ServicesContainer.swift in Sources */,
 				F1CBFAC82423C0D000FD4F2E /* KeychainCache.swift in Sources */,
 				F1C327FA2479CF10008A6D95 /* AuthService.swift in Sources */,
 				F169800524213DD900774568 /* Analytics.swift in Sources */,
 				F1C327F62479B408008A6D95 /* BaseAuthViewController.swift in Sources */,
 				F1C3282A247AF50D008A6D95 /* SwitchTableViewCell.swift in Sources */,
+				F109FB39247C6E690041B5A7 /* User+Current.swift in Sources */,
 				F1D004C3247BF6CF00EBEFE8 /* Exchange.swift in Sources */,
 				F1C32830247B2999008A6D95 /* DatabaseClient.swift in Sources */,
 				F1C32804247ABC5B008A6D95 /* BotsViewController.swift in Sources */,

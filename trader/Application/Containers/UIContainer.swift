@@ -14,7 +14,8 @@ protocol UIContainer {
     func root() -> UIViewController
     func auth() -> UIViewController
     func main() -> UIViewController
-    func linkExchange(onSelect: @escaping Handler<Exchange>) -> UIViewController
+    func exchanges(onSelect: @escaping Handler<Exchange>) -> UIViewController
+    func linkExchange(exchange: Exchange) -> UIViewController
 }
 
 // swiftlint:disable force_try
@@ -32,8 +33,12 @@ extension DependencyContainer: UIContainer {
         return try! resolve() as RootViewController
     }
     
-    func linkExchange(onSelect: @escaping Handler<Exchange>) -> UIViewController {
+    func exchanges(onSelect: @escaping Handler<Exchange>) -> UIViewController {
         return try! resolve(arguments: onSelect) as ExchangesViewController
+    }
+    
+    func linkExchange(exchange: Exchange) -> UIViewController {
+        return try! resolve(arguments: exchange) as LinkExchangeViewController
     }
 }
 
@@ -97,6 +102,13 @@ extension DependencyContainer {
             let controller = UIStoryboard.flows.instantiateViewController() as ExchangesViewController
             controller.exchangeService = try! container.resolve()
             controller.onSelect = onSelect
+            return controller
+        }
+        
+        container.register { (exchange: Exchange) -> LinkExchangeViewController in
+            let controller = UIStoryboard.flows.instantiateViewController() as LinkExchangeViewController
+            controller.exchange = exchange
+            controller.exchangeService = try! container.resolve()
             return controller
         }
         
