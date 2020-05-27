@@ -11,9 +11,9 @@ import CryptoKit
 extension AES {
     
     func encrypt(text: String,
-                 encoding: String.Encoding,
+                 encoding: String.Encoding = .utf8,
                  key: String,
-                 symmetricKey: SymmetricKey) -> GCM.SealedBox {
+                 symmetricKey: SymmetricKey = SymmetricKey(size: .bits256)) -> GCM.SealedBox {
         let keyData = key.data(using: encoding)!
         let textData = text.data(using: encoding)!
         
@@ -22,8 +22,8 @@ extension AES {
     
     func decrypt(box: GCM.SealedBox,
                  key: String,
-                 encoding: String.Encoding,
-                 symmetricKey: SymmetricKey) -> String {
+                 encoding: String.Encoding = .utf8,
+                 symmetricKey: SymmetricKey = SymmetricKey(size: .bits256)) -> String {
         let keyData = key.data(using: encoding)!
         let decrypted = try! AES.GCM.open(box, using: symmetricKey, authenticating: keyData)
         
