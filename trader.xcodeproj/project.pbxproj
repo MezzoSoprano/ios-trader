@@ -45,6 +45,8 @@
 		F1CBFAC52423B6C700FD4F2E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAC42423B6C700FD4F2E /* RootViewController.swift */; };
 		F1CBFAC82423C0D000FD4F2E /* KeychainCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */; };
 		F1D004C3247BF6CF00EBEFE8 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D004C2247BF6CF00EBEFE8 /* Exchange.swift */; };
+		F1DD2778247E94F500EFE9D2 /* CommonCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DD2777247E94F500EFE9D2 /* CommonCrypto.swift */; };
+		F1DD277A247E997700EFE9D2 /* libCommonCrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DD2779247E997700EFE9D2 /* libCommonCrypto.a */; };
 		F1EAB87A2479868D006C2590 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1EAB8792479868D006C2590 /* GoogleService-Info.plist */; };
 		F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAB87D247992E5006C2590 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
@@ -114,6 +116,8 @@
 		F1CBFAC42423B6C700FD4F2E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCache.swift; sourceTree = "<group>"; };
 		F1D004C2247BF6CF00EBEFE8 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
+		F1DD2777247E94F500EFE9D2 /* CommonCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCrypto.swift; sourceTree = "<group>"; };
+		F1DD2779247E997700EFE9D2 /* libCommonCrypto.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCommonCrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EAB8752479859B006C2590 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		F1EAB8762479859B006C2590 /* Example.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Example.xcconfig; sourceTree = "<group>"; };
 		F1EAB8792479868D006C2590 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1DD277A247E997700EFE9D2 /* libCommonCrypto.a in Frameworks */,
 				48980AAF38527D0A929C177A /* libPods-trader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +154,7 @@
 		3FF09388BDFADD3BE3CEC5EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1DD2779247E997700EFE9D2 /* libCommonCrypto.a */,
 				131A6E1E917C3948BEE5A788 /* libPods-trader.a */,
 			);
 			name = Frameworks;
@@ -267,6 +273,7 @@
 				F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */,
 				F1CBFAB52423643400FD4F2E /* Localization.swift */,
 				F1C3282F247B2999008A6D95 /* DatabaseClient.swift */,
+				F1DD2777247E94F500EFE9D2 /* CommonCrypto.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -713,6 +720,7 @@
 				F1C327F62479B408008A6D95 /* BaseAuthViewController.swift in Sources */,
 				F1C3282A247AF50D008A6D95 /* SwitchTableViewCell.swift in Sources */,
 				F109FB39247C6E690041B5A7 /* User+Current.swift in Sources */,
+				F1DD2778247E94F500EFE9D2 /* CommonCrypto.swift in Sources */,
 				F1D004C3247BF6CF00EBEFE8 /* Exchange.swift in Sources */,
 				F1C32830247B2999008A6D95 /* DatabaseClient.swift in Sources */,
 				F1C32804247ABC5B008A6D95 /* BotsViewController.swift in Sources */,

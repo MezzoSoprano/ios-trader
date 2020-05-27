@@ -9,6 +9,7 @@ def pods
   pod 'Sourcery'
   pod 'SwiftGen'
   pod 'SwiftLint'
+  pod 'CommonCrypto'
   pod 'RxSwift'
   pod 'SwiftyJSON'
   pod 'FirebaseUI/Auth'
