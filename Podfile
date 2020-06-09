@@ -16,6 +16,8 @@ def pods
   pod 'FirebaseUI/Email'
   pod 'FirebaseUI/Google'
   pod 'Firebase/Database'
+  pod 'RxCoreLocation'
+  pod 'CryptoSwift', '~> 1.0'
 end
 
 target 'trader' do

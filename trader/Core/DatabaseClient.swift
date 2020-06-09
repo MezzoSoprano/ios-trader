@@ -36,7 +36,7 @@ final class FirebaseDatabaseClient {
 
 extension DatabaseReference {
     
-    func child(_ route: Route) -> DatabaseReference{
+    func child(_ route: Route) -> DatabaseReference {
         return child(route.rawValue)
     }
 }

@@ -15,12 +15,29 @@
 		F10B40462420E85C00E1080B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10B40442420E85C00E1080B /* Main.storyboard */; };
 		F10B40482420E85D00E1080B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10B40472420E85D00E1080B /* Assets.xcassets */; };
 		F10B404B2420E85D00E1080B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10B40492420E85D00E1080B /* LaunchScreen.storyboard */; };
+		F11831A6248FBD5100C949F3 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11831A5248FBD5100C949F3 /* LoadingViewController.swift */; };
+		F12594F9248FB12C0071BFDF /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12594F8248FB12C0071BFDF /* OrderTableViewCell.swift */; };
+		F12594FC248FB2030071BFDF /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12594FB248FB2030071BFDF /* OrderService.swift */; };
+		F12594FE248FB2130071BFDF /* OrderServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12594FD248FB2130071BFDF /* OrderServiceImpl.swift */; };
 		F1563F962421091600586781 /* Configs.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1563F952421091600586781 /* Configs.generated.swift */; };
 		F169800524213DD900774568 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F169800424213DD900774568 /* Analytics.swift */; };
 		F17B50B5247C673D0093AB1B /* LinkExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17B50B4247C673D0093AB1B /* LinkExchangeViewController.swift */; };
 		F186430A2420FD3200E7B01A /* Configs.stencil in Resources */ = {isa = PBXBuildFile; fileRef = F18643092420FD3200E7B01A /* Configs.stencil */; };
 		F1A0DFFC24220B54007F26E1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1A0DFFE24220B54007F26E1 /* Localizable.strings */; };
 		F1A0E00024220C4E007F26E1 /* LocalizedStrings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A0DFFF24220C4E007F26E1 /* LocalizedStrings.generated.swift */; };
+		F1BE9718248F6E1C0072782F /* BinanceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE9717248F6E1C0072782F /* BinanceAPI.swift */; };
+		F1BE9724248F6E700072782F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE971A248F6E6F0072782F /* Account.swift */; };
+		F1BE9725248F6E700072782F /* BookTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE971B248F6E6F0072782F /* BookTicker.swift */; };
+		F1BE9726248F6E700072782F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE971C248F6E700072782F /* Order.swift */; };
+		F1BE9727248F6E700072782F /* MarketDepth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE971D248F6E700072782F /* MarketDepth.swift */; };
+		F1BE9728248F6E700072782F /* Candlestick.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE971E248F6E700072782F /* Candlestick.swift */; };
+		F1BE9729248F6E700072782F /* TickerPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE971F248F6E700072782F /* TickerPrice.swift */; };
+		F1BE972A248F6E700072782F /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE9720248F6E700072782F /* Trade.swift */; };
+		F1BE972B248F6E700072782F /* AggregatedTrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE9721248F6E700072782F /* AggregatedTrade.swift */; };
+		F1BE972C248F6E700072782F /* ExchangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE9722248F6E700072782F /* ExchangeInfo.swift */; };
+		F1BE972D248F6E700072782F /* TickerPriceChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE9723248F6E700072782F /* TickerPriceChange.swift */; };
+		F1BE9730248F6EC00072782F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE972F248F6EC00072782F /* String+Extension.swift */; };
+		F1BE9733248F827A0072782F /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BE9732248F827A0072782F /* OrdersViewController.swift */; };
 		F1C327F62479B408008A6D95 /* BaseAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C327F52479B408008A6D95 /* BaseAuthViewController.swift */; };
 		F1C327FA2479CF10008A6D95 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C327F92479CF10008A6D95 /* AuthService.swift */; };
 		F1C327FC2479CF1A008A6D95 /* AuthServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C327FB2479CF1A008A6D95 /* AuthServiceImpl.swift */; };
@@ -85,6 +102,10 @@
 		F10B404C2420E85D00E1080B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F10B40512420E85D00E1080B /* traderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = traderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10B405C2420E85D00E1080B /* traderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = traderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11831A5248FBD5100C949F3 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		F12594F8248FB12C0071BFDF /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		F12594FB248FB2030071BFDF /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
+		F12594FD248FB2130071BFDF /* OrderServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceImpl.swift; sourceTree = "<group>"; };
 		F1563F952421091600586781 /* Configs.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.generated.swift; sourceTree = "<group>"; };
 		F169800424213DD900774568 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		F17B50B4247C673D0093AB1B /* LinkExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExchangeViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +113,19 @@
 		F18643092420FD3200E7B01A /* Configs.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Configs.stencil; sourceTree = "<group>"; };
 		F1A0DFFD24220B54007F26E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F1A0DFFF24220C4E007F26E1 /* LocalizedStrings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.generated.swift; sourceTree = "<group>"; };
+		F1BE9717248F6E1C0072782F /* BinanceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceAPI.swift; sourceTree = "<group>"; };
+		F1BE971A248F6E6F0072782F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		F1BE971B248F6E6F0072782F /* BookTicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTicker.swift; sourceTree = "<group>"; };
+		F1BE971C248F6E700072782F /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		F1BE971D248F6E700072782F /* MarketDepth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketDepth.swift; sourceTree = "<group>"; };
+		F1BE971E248F6E700072782F /* Candlestick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candlestick.swift; sourceTree = "<group>"; };
+		F1BE971F248F6E700072782F /* TickerPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerPrice.swift; sourceTree = "<group>"; };
+		F1BE9720248F6E700072782F /* Trade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trade.swift; sourceTree = "<group>"; };
+		F1BE9721248F6E700072782F /* AggregatedTrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregatedTrade.swift; sourceTree = "<group>"; };
+		F1BE9722248F6E700072782F /* ExchangeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeInfo.swift; sourceTree = "<group>"; };
+		F1BE9723248F6E700072782F /* TickerPriceChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerPriceChange.swift; sourceTree = "<group>"; };
+		F1BE972F248F6EC00072782F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		F1BE9732248F827A0072782F /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		F1C327F52479B408008A6D95 /* BaseAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthViewController.swift; sourceTree = "<group>"; };
 		F1C327F92479CF10008A6D95 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F1C327FB2479CF1A008A6D95 /* AuthServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceImpl.swift; sourceTree = "<group>"; };
@@ -266,6 +300,15 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		F12594FA248FB1F30071BFDF /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				F12594FB248FB2030071BFDF /* OrderService.swift */,
+				F12594FD248FB2130071BFDF /* OrderServiceImpl.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		F169800324213DC300774568 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +317,7 @@
 				F1CBFAB52423643400FD4F2E /* Localization.swift */,
 				F1C3282F247B2999008A6D95 /* DatabaseClient.swift */,
 				F1DD2777247E94F500EFE9D2 /* CommonCrypto.swift */,
+				F1BE9717248F6E1C0072782F /* BinanceAPI.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -314,6 +358,39 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		F1BE9719248F6E610072782F /* Binance */ = {
+			isa = PBXGroup;
+			children = (
+				F1BE971A248F6E6F0072782F /* Account.swift */,
+				F1BE9721248F6E700072782F /* AggregatedTrade.swift */,
+				F1BE971B248F6E6F0072782F /* BookTicker.swift */,
+				F1BE971E248F6E700072782F /* Candlestick.swift */,
+				F1BE9722248F6E700072782F /* ExchangeInfo.swift */,
+				F1BE971D248F6E700072782F /* MarketDepth.swift */,
+				F1BE971C248F6E700072782F /* Order.swift */,
+				F1BE971F248F6E700072782F /* TickerPrice.swift */,
+				F1BE9723248F6E700072782F /* TickerPriceChange.swift */,
+				F1BE9720248F6E700072782F /* Trade.swift */,
+			);
+			path = Binance;
+			sourceTree = "<group>";
+		};
+		F1BE972E248F6EAC0072782F /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				F1BE972F248F6EC00072782F /* String+Extension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		F1BE9731248F825D0072782F /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				F1BE9732248F827A0072782F /* OrdersViewController.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
 		F1C327F42479B389008A6D95 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +402,7 @@
 		F1C327F72479CEE6008A6D95 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F12594FA248FB1F30071BFDF /* Order */,
 				F1C32834247B4848008A6D95 /* Exchanges */,
 				F1C327F82479CF04008A6D95 /* Auth */,
 			);
@@ -387,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				F1C32829247AF50D008A6D95 /* SwitchTableViewCell.swift */,
+				F12594F8248FB12C0071BFDF /* OrderTableViewCell.swift */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -394,6 +473,7 @@
 		F1C32831247B40E5008A6D95 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F1BE9719248F6E610072782F /* Binance */,
 				F109FB37247C6E5D0041B5A7 /* User */,
 				F109FB34247C6CCA0041B5A7 /* Exchange */,
 			);
@@ -424,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				F1CBFAC32423B6AD00FD4F2E /* Application */,
+				F1BE9731248F825D0072782F /* Orders */,
 				F1C327F42479B389008A6D95 /* Authorization */,
 				F1C32802247ABBC8008A6D95 /* Bots */,
 				F1C32801247ABB5F008A6D95 /* Dashboard */,
@@ -436,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				F1CBFAC42423B6C700FD4F2E /* RootViewController.swift */,
+				F11831A5248FBD5100C949F3 /* LoadingViewController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -443,6 +525,7 @@
 		F1EAB87B247992D2006C2590 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F1BE972E248F6EAC0072782F /* Foundation */,
 				F1C327FD2479D403008A6D95 /* RxSwift */,
 				F1EAB87C247992D8006C2590 /* UIKit */,
 			);
@@ -704,29 +787,46 @@
 				F1C32838247B4896008A6D95 /* ExchangeServiceImpl.swift in Sources */,
 				F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */,
 				F1563F962421091600586781 /* Configs.generated.swift in Sources */,
+				F1BE9727248F6E700072782F /* MarketDepth.swift in Sources */,
+				F1BE9733248F827A0072782F /* OrdersViewController.swift in Sources */,
 				F1C327FC2479CF1A008A6D95 /* AuthServiceImpl.swift in Sources */,
 				F17B50B5247C673D0093AB1B /* LinkExchangeViewController.swift in Sources */,
 				F1CBFABD24239F3F00FD4F2E /* CoreContainer.swift in Sources */,
+				F1BE9728248F6E700072782F /* Candlestick.swift in Sources */,
+				F1BE9730248F6EC00072782F /* String+Extension.swift in Sources */,
+				F1BE972D248F6E700072782F /* TickerPriceChange.swift in Sources */,
 				F1CBFAB62423643400FD4F2E /* Localization.swift in Sources */,
+				F12594FE248FB2130071BFDF /* OrderServiceImpl.swift in Sources */,
+				F1BE9724248F6E700072782F /* Account.swift in Sources */,
 				F1CBFABF24239F4B00FD4F2E /* UIContainer.swift in Sources */,
 				F109FB36247C6CDD0041B5A7 /* Exchange+Link.swift in Sources */,
 				F1CBFABB24239F2E00FD4F2E /* Assembly.swift in Sources */,
 				F10B403F2420E85C00E1080B /* AppDelegate.swift in Sources */,
 				F1062722247C668A00701A77 /* ExchangesViewController.swift in Sources */,
 				F1CBFAC12423A26E00FD4F2E /* ServicesContainer.swift in Sources */,
+				F12594FC248FB2030071BFDF /* OrderService.swift in Sources */,
 				F1CBFAC82423C0D000FD4F2E /* KeychainCache.swift in Sources */,
 				F1C327FA2479CF10008A6D95 /* AuthService.swift in Sources */,
+				F1BE9729248F6E700072782F /* TickerPrice.swift in Sources */,
 				F169800524213DD900774568 /* Analytics.swift in Sources */,
+				F1BE972C248F6E700072782F /* ExchangeInfo.swift in Sources */,
 				F1C327F62479B408008A6D95 /* BaseAuthViewController.swift in Sources */,
+				F1BE9718248F6E1C0072782F /* BinanceAPI.swift in Sources */,
+				F12594F9248FB12C0071BFDF /* OrderTableViewCell.swift in Sources */,
 				F1C3282A247AF50D008A6D95 /* SwitchTableViewCell.swift in Sources */,
 				F109FB39247C6E690041B5A7 /* User+Current.swift in Sources */,
+				F11831A6248FBD5100C949F3 /* LoadingViewController.swift in Sources */,
+				F1BE9725248F6E700072782F /* BookTicker.swift in Sources */,
 				F1DD2778247E94F500EFE9D2 /* CommonCrypto.swift in Sources */,
+				F1BE972A248F6E700072782F /* Trade.swift in Sources */,
 				F1D004C3247BF6CF00EBEFE8 /* Exchange.swift in Sources */,
 				F1C32830247B2999008A6D95 /* DatabaseClient.swift in Sources */,
 				F1C32804247ABC5B008A6D95 /* BotsViewController.swift in Sources */,
+				F1BE9726248F6E700072782F /* Order.swift in Sources */,
 				F1C32833247B40F5008A6D95 /* User.swift in Sources */,
 				F1C3282E247AFD86008A6D95 /* SettingsViewModel.swift in Sources */,
 				F1C327FF2479D413008A6D95 /* RxSwift+AnyObject.swift in Sources */,
+				F1BE972B248F6E700072782F /* AggregatedTrade.swift in Sources */,
 				F1C3282C247AFBD8008A6D95 /* UITableView.swift in Sources */,
 				F1C32836247B4856008A6D95 /* ExchangesService.swift in Sources */,
 			);

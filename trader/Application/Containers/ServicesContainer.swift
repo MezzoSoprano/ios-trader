@@ -35,6 +35,10 @@ extension DependencyContainer {
             return ExchangeServiceImpl(client: try! container.resolve(), ref: try! container.resolve())
         }
         
+        container.register(.singleton) { () -> OrderService in
+            return OrderServiceImpl(client: try! container.resolve())
+        }
+        
         return container
     }
 }

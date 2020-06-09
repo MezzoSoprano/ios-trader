@@ -5,6 +5,7 @@ PODS:
   - AppAuth/Core (1.3.0)
   - AppAuth/ExternalUserAgent (1.3.0)
   - CommonCrypto (1.1)
+  - CryptoSwift (1.3.1)
   - Dip (7.0.1)
   - Firebase/Auth (6.20.0):
     - Firebase/CoreOnly
@@ -85,6 +86,16 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxCoreLocation (1.4.2):
+    - RxCoreLocation/Core (= 1.4.2)
+  - RxCoreLocation/Core (1.4.2):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
   - RxSwift (5.1.0)
   - Sourcery (0.17.0)
   - SwiftGen (6.1.0)
@@ -93,6 +104,7 @@ PODS:
 
 DEPENDENCIES:
   - CommonCrypto
+  - CryptoSwift (~> 1.0)
   - Dip
   - Firebase/Database
   - FirebaseUI/Auth
@@ -100,6 +112,7 @@ DEPENDENCIES:
   - FirebaseUI/Google
   - KeychainAccess
   - Logging
+  - RxCoreLocation
   - RxSwift
   - Sourcery
   - SwiftGen
@@ -110,6 +123,7 @@ SPEC REPOS:
   trunk:
     - AppAuth
     - CommonCrypto
+    - CryptoSwift
     - Dip
     - Firebase
     - FirebaseAuth
@@ -129,6 +143,9 @@ SPEC REPOS:
     - leveldb-library
     - Logging
     - nanopb
+    - RxCocoa
+    - RxCoreLocation
+    - RxRelay
     - RxSwift
     - Sourcery
     - SwiftGen
@@ -138,6 +155,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
   CommonCrypto: e18c8416332cca5efe80c197f2a522d471c42626
+  CryptoSwift: f12f037f6d0fcd6d48c96db0071b653de64e6c4d
   Dip: 79509d5dc4f648e10e922ed79c608a7761c52b13
   Firebase: fe7f74012742ab403451dd283e6909b8f1fb348a
   FirebaseAuth: 7047aec89c0b17ecd924a550c853f0c27ac6015e
@@ -157,12 +175,15 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   Logging: 7838d379d234d7e5ae1265fa02804a9084caf04c
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxCoreLocation: 0cde68bd64dd1af3e7beaaac8a693ef613fd3a05
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
   Sourcery: 3ed61be7c8a1218fce349266139379dba477efe0
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: e7de4edb027ed3eae82146307bd1a18f94a89bbc
+PODFILE CHECKSUM: e03499658b4a66d412f1b41b529f7d461cca89b1
 
 COCOAPODS: 1.9.1

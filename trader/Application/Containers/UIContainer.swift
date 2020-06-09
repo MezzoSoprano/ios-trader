@@ -59,7 +59,7 @@ extension DependencyContainer {
             
             let controllers = [
                 try container.resolve() as DashboardViewController,
-                try container.resolve() as BotsViewController,
+                try container.resolve() as OrdersViewController,
                 try container.resolve() as SettingsViewController
             ]
             
@@ -68,7 +68,7 @@ extension DependencyContainer {
                 navController.navigationBar.prefersLargeTitles = true
                 return navController
             }
-            controller.selectedIndex = 2
+            controller.selectedIndex = 1
             
             return controller
         }
@@ -89,6 +89,13 @@ extension DependencyContainer {
         container.register { () -> BotsViewController in
             let controller = UIStoryboard.flows.instantiateViewController() as BotsViewController
             controller.tabBarItem.image = #imageLiteral(resourceName: "icon_bot")
+            return controller
+        }
+        
+        container.register { () -> OrdersViewController in
+            let controller = UIStoryboard.flows.instantiateViewController() as OrdersViewController
+            controller.tabBarItem.image = #imageLiteral(resourceName: "icon_bot")
+            controller.orderService = try! container.resolve()
             return controller
         }
         

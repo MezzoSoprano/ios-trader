@@ -23,6 +23,17 @@ class ExchangeServiceImpl {
 
 extension ExchangeServiceImpl: ExchangeService {
     
+    func linkedExchanges() -> Single<Exchange.Link> {
+        return Single.create { [weak self] _ in
+            self?.database.child(.users).child(.linkedExchanges).observeSingleEvent(of: .value, with: { snap in
+                
+                print(snap)
+            })
+            
+            return Disposables.create()
+        }
+    }
+    
     func link(exchange: Exchange.Link) -> Single<Void> {
         guard let dict = exchange.dictionary else { fatalError() }
         

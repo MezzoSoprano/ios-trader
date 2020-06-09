@@ -17,7 +17,8 @@ class ExchangesViewController: UITableViewController {
         
         exchangeService
             .availableExchanges()
-            .map { $0.map(Exchange.init).compactMap { $0 } }
+            .map { $0.map(Exchange.init) }
+            .map { $0.compactMap { $0 }}
             .subscribe(onSuccess: { [weak self] in
                 self?.exchanges = $0
                 self?.tableView.reloadData()
