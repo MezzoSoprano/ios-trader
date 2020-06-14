@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>263417533599-kne6f642msu7la4v7p53aqls4r7ajrfl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.263417533599-kne6f642msu7la4v7p53aqls4r7ajrfl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCyLDzekv-7ox7X2LoA-bDc4X4HBD6JGrU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>263417533599</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.trader.dyploma</string>
+	<key>PROJECT_ID</key>
+	<string>trader-cc266</string>
+	<key>STORAGE_BUCKET</key>
+	<string>trader-cc266.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:263417533599:ios:daaa82b13c4400fbc2beaa</string>
+	<key>DATABASE_URL</key>
+	<string>https://trader-cc266.firebaseio.com</string>
+</dict>
+</plist>

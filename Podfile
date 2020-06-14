@@ -9,6 +9,15 @@ def pods
   pod 'Sourcery'
   pod 'SwiftGen'
   pod 'SwiftLint'
+  pod 'CommonCrypto'
+  pod 'RxSwift'
+  pod 'SwiftyJSON'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Email'
+  pod 'FirebaseUI/Google'
+  pod 'Firebase/Database'
+  pod 'RxCoreLocation'
+  pod 'CryptoSwift', '~> 1.0'
 end
 
 target 'trader' do
