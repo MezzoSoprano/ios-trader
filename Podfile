@@ -18,6 +18,8 @@ def pods
   pod 'Firebase/Database'
   pod 'RxCoreLocation'
   pod 'CryptoSwift', '~> 1.0'
+  pod 'APIKit'
+  pod 'Crypto'
 end
 
 target 'trader' do
