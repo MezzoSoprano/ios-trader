@@ -84,6 +84,7 @@
 		F1DD277A247E997700EFE9D2 /* libCommonCrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DD2779247E997700EFE9D2 /* libCommonCrypto.a */; };
 		F1EAB87A2479868D006C2590 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1EAB8792479868D006C2590 /* GoogleService-Info.plist */; };
 		F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAB87D247992E5006C2590 /* UIViewController.swift */; };
+		F1EF5A032498FA680057F022 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF5A022498FA670057F022 /* WebSocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +193,7 @@
 		F1EAB8762479859B006C2590 /* Example.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Example.xcconfig; sourceTree = "<group>"; };
 		F1EAB8792479868D006C2590 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1EAB87D247992E5006C2590 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F1EF5A022498FA670057F022 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +350,7 @@
 		F169800324213DC300774568 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F1EF5A012498FA410057F022 /* WebSockets */,
 				F177940B2498C0E6004D440C /* Bittrex */,
 				F169800424213DD900774568 /* Analytics.swift */,
 				F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */,
@@ -617,6 +620,14 @@
 				F1C3282B247AFBD8008A6D95 /* UITableView.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F1EF5A012498FA410057F022 /* WebSockets */ = {
+			isa = PBXGroup;
+			children = (
+				F1EF5A022498FA670057F022 /* WebSocket.swift */,
+			);
+			path = WebSockets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -895,6 +906,7 @@
 				F17794282498C143004D440C /* MarketHistory.swift in Sources */,
 				F17794252498C143004D440C /* OrderBook.swift in Sources */,
 				F169800524213DD900774568 /* Analytics.swift in Sources */,
+				F1EF5A032498FA680057F022 /* WebSocket.swift in Sources */,
 				F1BE972C248F6E700072782F /* ExchangeInfo.swift in Sources */,
 				F1C327F62479B408008A6D95 /* BaseAuthViewController.swift in Sources */,
 				F17794292498C143004D440C /* MarketSummary.swift in Sources */,

@@ -101,6 +101,8 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - Sourcery (0.18.0)
+  - Starscream (3.1.1)
+  - SwiftDate (6.1.0)
   - SwiftGen (6.1.0)
   - SwiftLint (0.39.2)
   - SwiftyJSON (4.3.0)
@@ -119,6 +121,8 @@ DEPENDENCIES:
   - RxCoreLocation
   - RxSwift
   - Sourcery
+  - Starscream (~> 3.1.0)
+  - SwiftDate
   - SwiftGen
   - SwiftLint
   - SwiftyJSON
@@ -154,6 +158,8 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - Sourcery
+    - Starscream
+    - SwiftDate
     - SwiftGen
     - SwiftLint
     - SwiftyJSON
@@ -188,10 +194,12 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   Sourcery: e0e8658a1ce6d9f475156ad3ffce4c68f1261b3e
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 6842564f2d52657606ffe403ed83f7c43b8ea796
+PODFILE CHECKSUM: 258178f198dcf78d43c8a22ba538859c8e25d705
 
 COCOAPODS: 1.9.1

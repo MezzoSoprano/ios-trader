@@ -10,19 +10,19 @@
 import Foundation
 
 public struct Candlestick: Codable {
-    public var openTime: Int
-    public var open: String
-    public var high: String
-    public var low: String
-    public var close: String
-    public var volume: String
-    public var closeTime: Int
-    public var quoteAssetVolume: String
-    public var trades: Int
-    public var takerBuyBaseAssetVolume: String
-    public var takerBuyQuoteAssetVolume: String
-    public var somethingToIgnore: String
-
+    public var openTime: Int = 0
+    public var open: String = ""
+    public var high: String = ""
+    public var low: String = ""
+    public var close: String = ""
+    public var volume: String = ""
+    public var closeTime: Int = 0
+    public var quoteAssetVolume: String = ""
+    public var trades: Int = 0
+    public var takerBuyBaseAssetVolume: String = ""
+    public var takerBuyQuoteAssetVolume: String = ""
+    public var somethingToIgnore: String = ""
+    
     public init(from decoder: Decoder) throws {
         var container = try decoder.unkeyedContainer()
         self.openTime = try container.decode(Int.self)
@@ -38,7 +38,7 @@ public struct Candlestick: Codable {
         self.takerBuyQuoteAssetVolume = try container.decode(String.self)
         self.somethingToIgnore = try container.decode(String.self)
     }
-
+    
     public func encode(to encoder: Encoder) throws {
         var container = encoder.unkeyedContainer()
         try container.encode(self.openTime)
@@ -53,6 +53,21 @@ public struct Candlestick: Codable {
         try container.encode(self.takerBuyBaseAssetVolume)
         try container.encode(self.takerBuyQuoteAssetVolume)
         try container.encode(self.somethingToIgnore)
+    }
+    
+    init() {
+        self.openTime = 0
+        self.open = ""
+        self.high = ""
+        self.low = ""
+        self.close = ""
+        self.volume = ""
+        self.closeTime = 0
+        self.quoteAssetVolume = ""
+        self.trades = 0
+        self.takerBuyBaseAssetVolume = ""
+        self.takerBuyQuoteAssetVolume = ""
+        self.somethingToIgnore = ""
     }
 }
 
@@ -73,4 +88,3 @@ public enum CandlestickInterval: String, Codable {
     case week1 = "1w"
     case month1 = "1M"
 }
-

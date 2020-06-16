@@ -20,7 +20,9 @@ public final class Bittrex {
 }
 
 // MARK: - Public Service
+
 extension Bittrex {
+    
     public func getMarkets(handler: @escaping (Result<GetMarketsResponse, APIKit.SessionTaskError>) -> Void) {
         let request = PublicService.GetMarkets()
         send(request, handler: handler)
@@ -68,7 +70,9 @@ extension Bittrex {
 }
 
 // MARK: - Account Service
+
 extension Bittrex {
+    
     public func getBalances(handler: @escaping (Result<GetBalancesResponse, APIKit.SessionTaskError>) -> Void) {
         let request = AccountService.GetBalances()
         send(request, handler: handler)
@@ -91,7 +95,9 @@ extension Bittrex {
 }
 
 // MARK: - Market Service
+
 extension Bittrex {
+    
     public func buyLimit(market: String, quantity: Double, rate: Double, handler: @escaping (Result<BuySellLimitResponse, APIKit.SessionTaskError>) -> Void) {
         let request = MarketService.BuyLimit(market: market, quantity: quantity, rate: rate)
         send(request, handler: handler)
@@ -114,6 +120,7 @@ extension Bittrex {
 }
 
 extension Bittrex {
+    
     public func send<Request: BittrexRequest>(_ request: Request, handler: @escaping (Result<Request.Response, APIKit.SessionTaskError>) -> Void) {
         let httpRequest = HTTPRequest(request, auth: auth, nonce: nonce)
         Session.shared.send(httpRequest, handler: handler)

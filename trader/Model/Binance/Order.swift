@@ -47,7 +47,7 @@ public struct OrderResponse: Codable {
     public var orderId: Int
     public var clientOrderId: String
     public var transactTime: Int
-
+    
     // RESULT
     public var price: String?
     public var origQty: String?
@@ -56,7 +56,7 @@ public struct OrderResponse: Codable {
     public var timeInForce: TimeInForce?
     public var type: OrderType?
     public var side: OrderSide?
-
+    
     // FULL
     public var fills: [OrderFill]?
 }
@@ -66,7 +66,7 @@ public struct OrderFill: Codable {
     public var quantity: String
     public var commission: String
     public var commissionAsset: String
-
+    
     private enum CodingKeys: String, CodingKey {
         case price, quantity = "qty", commission, commissionAsset
     }
@@ -81,14 +81,32 @@ public struct Order: Codable {
     public var originalQuantity: String
     public var executedQuantity: String
     public var status: OrderStatus
-    public var timeInForce: TimeInForce
+    public var timeInForce: TimeInForce?
     public var type: OrderType
     public var side: OrderSide
     public var stopPrice: String
     public var icebergQuantity: String
     public var time: Int
     public var isWorking: Bool
-
+    
+    
+    init() {
+        self.symbol = ""
+        self.orderId = 1
+        self.clientOrderId = ""
+        self.price = ""
+        self.originalQuantity = ""
+        self.executedQuantity = ""
+        self.status = .canceled
+        self.timeInForce = nil
+        self.type = .limit
+        self.side = .sell
+        self.stopPrice = ""
+        self.icebergQuantity = ""
+        self.time = .min
+        self.isWorking = false
+    }
+    
     private enum CodingKeys: String, CodingKey {
         case symbol
         case orderId
@@ -105,7 +123,7 @@ public struct Order: Codable {
         case time
         case isWorking
     }
-
+    
     var formattedQuantity: Double? {
         return Double(originalQuantity)
     }

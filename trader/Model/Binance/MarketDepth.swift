@@ -13,6 +13,12 @@ public struct MarketDepth: Codable {
     public var lastUpdateId: Int
     public var bids: [PriceQuantity]
     public var asks: [PriceQuantity]
+    
+    init() {
+        self.lastUpdateId = 0
+        self.bids = []
+        self.asks = []
+    }
 }
 
 public struct PriceQuantity: Codable {

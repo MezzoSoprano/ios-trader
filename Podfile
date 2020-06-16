@@ -19,7 +19,8 @@ def pods
   pod 'RxCoreLocation'
   pod 'CryptoSwift', '~> 1.0'
   pod 'APIKit'
-  pod 'Crypto'
+  pod 'Starscream', '~> 3.1.0'
+  pod 'SwiftDate'
 end
 
 target 'trader' do

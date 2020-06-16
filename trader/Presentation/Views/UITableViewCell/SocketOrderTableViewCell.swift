@@ -32,4 +32,11 @@ struct SocketOrder {
     let price: String
     let amount: String
     let date: String
+    
+    init(from: Order) {
+        self.side = from.side
+        self.price = from.price
+        self.amount = from.originalQuantity
+        self.date = "\(from.time)"
+    }
 }
