@@ -69,6 +69,8 @@
 		F1C32833247B40F5008A6D95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32832247B40F5008A6D95 /* User.swift */; };
 		F1C32836247B4856008A6D95 /* ExchangesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32835247B4856008A6D95 /* ExchangesService.swift */; };
 		F1C32838247B4896008A6D95 /* ExchangeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32837247B4896008A6D95 /* ExchangeServiceImpl.swift */; };
+		F1C381282490081000124BF7 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C381272490081000124BF7 /* BuyViewController.swift */; };
+		F1C3813F2490258700124BF7 /* SocketOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3813E2490258700124BF7 /* SocketOrderTableViewCell.swift */; };
 		F1CBFAB62423643400FD4F2E /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAB52423643400FD4F2E /* Localization.swift */; };
 		F1CBFAB82423646900FD4F2E /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1CBFAB72423646900FD4F2E /* Errors.strings */; };
 		F1CBFABB24239F2E00FD4F2E /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFABA24239F2E00FD4F2E /* Assembly.swift */; };
@@ -173,6 +175,8 @@
 		F1C32832247B40F5008A6D95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F1C32835247B4856008A6D95 /* ExchangesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesService.swift; sourceTree = "<group>"; };
 		F1C32837247B4896008A6D95 /* ExchangeServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeServiceImpl.swift; sourceTree = "<group>"; };
+		F1C381272490081000124BF7 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		F1C3813E2490258700124BF7 /* SocketOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketOrderTableViewCell.swift; sourceTree = "<group>"; };
 		F1CBFAB52423643400FD4F2E /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		F1CBFAB72423646900FD4F2E /* Errors.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Errors.strings; sourceTree = "<group>"; };
 		F1CBFABA24239F2E00FD4F2E /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
@@ -457,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				F1BE9732248F827A0072782F /* OrdersViewController.swift */,
+				F1C381272490081000124BF7 /* BuyViewController.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -537,6 +542,7 @@
 			children = (
 				F1C32829247AF50D008A6D95 /* SwitchTableViewCell.swift */,
 				F12594F8248FB12C0071BFDF /* OrderTableViewCell.swift */,
+				F1C3813E2490258700124BF7 /* SocketOrderTableViewCell.swift */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -853,6 +859,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F177942C2498C2D5004D440C /* AuthBittrex.swift in Sources */,
+				F1C3813F2490258700124BF7 /* SocketOrderTableViewCell.swift in Sources */,
 				F1C32807247ABD2F008A6D95 /* DashboardViewController.swift in Sources */,
 				F1CBFAC52423B6C700FD4F2E /* RootViewController.swift in Sources */,
 				F1C32809247ABD93008A6D95 /* SettingsViewController.swift in Sources */,
@@ -906,6 +913,7 @@
 				F17794142498C11A004D440C /* AccountService.swift in Sources */,
 				F1C32830247B2999008A6D95 /* DatabaseClient.swift in Sources */,
 				F177942A2498C143004D440C /* Currency.swift in Sources */,
+				F1C381282490081000124BF7 /* BuyViewController.swift in Sources */,
 				F1C32804247ABC5B008A6D95 /* BotsViewController.swift in Sources */,
 				F1BE9726248F6E700072782F /* Order.swift in Sources */,
 				F1C32833247B40F5008A6D95 /* User.swift in Sources */,
