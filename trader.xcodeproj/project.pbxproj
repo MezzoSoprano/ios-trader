@@ -358,13 +358,9 @@
 		F177940B2498C0E6004D440C /* Bittrex */ = {
 			isa = PBXGroup;
 			children = (
-				F177942B2498C2D5004D440C /* AuthBittrex.swift */,
 				F17794162498C124004D440C /* Bittrex.swift */,
-				F177940F2498C11A004D440C /* AccountService.swift */,
 				F177940E2498C11A004D440C /* BittrexRequest.swift */,
 				F177940D2498C11A004D440C /* HTTPRequest.swift */,
-				F17794102498C11A004D440C /* MarketService.swift */,
-				F177940C2498C11A004D440C /* PublicService.swift */,
 			);
 			path = Bittrex;
 			sourceTree = "<group>";
@@ -372,6 +368,7 @@
 		F17794182498C134004D440C /* Bittrex */ = {
 			isa = PBXGroup;
 			children = (
+				F177942B2498C2D5004D440C /* AuthBittrex.swift */,
 				F17794192498C142004D440C /* Address.swift */,
 				F177941E2498C142004D440C /* Balance.swift */,
 				F17794212498C143004D440C /* Currency.swift */,
@@ -381,6 +378,16 @@
 				F177941A2498C142004D440C /* OpenOrder.swift */,
 				F177941C2498C142004D440C /* OrderBook.swift */,
 				F177941D2498C142004D440C /* Tick.swift */,
+			);
+			path = Bittrex;
+			sourceTree = "<group>";
+		};
+		F177942D2498C469004D440C /* Bittrex */ = {
+			isa = PBXGroup;
+			children = (
+				F177940F2498C11A004D440C /* AccountService.swift */,
+				F17794102498C11A004D440C /* MarketService.swift */,
+				F177940C2498C11A004D440C /* PublicService.swift */,
 			);
 			path = Bittrex;
 			sourceTree = "<group>";
@@ -465,6 +472,7 @@
 		F1C327F72479CEE6008A6D95 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F177942D2498C469004D440C /* Bittrex */,
 				F12594FA248FB1F30071BFDF /* Order */,
 				F1C32834247B4848008A6D95 /* Exchanges */,
 				F1C327F82479CF04008A6D95 /* Auth */,
