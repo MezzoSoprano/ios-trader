@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BotsViewController: UIViewController {
+class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +16,7 @@ class BotsViewController: UIViewController {
     }
 }
 
-extension BotsViewController {
+extension WelcomeViewController {
     
     @IBAction func createBot(_ sender: Any) {
         let controller = assembly.ui.exchanges { _ in () }

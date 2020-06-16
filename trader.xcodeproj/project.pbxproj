@@ -19,7 +19,15 @@
 		F12594F9248FB12C0071BFDF /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12594F8248FB12C0071BFDF /* OrderTableViewCell.swift */; };
 		F12594FC248FB2030071BFDF /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12594FB248FB2030071BFDF /* OrderService.swift */; };
 		F12594FE248FB2130071BFDF /* OrderServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12594FD248FB2130071BFDF /* OrderServiceImpl.swift */; };
+		F1452E7D2499105F00DF1267 /* AvailableAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1452E792499105F00DF1267 /* AvailableAmountView.swift */; };
+		F1452E7E2499105F00DF1267 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1452E7A2499105F00DF1267 /* AmountView.swift */; };
+		F1452E7F2499105F00DF1267 /* CurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1452E7B2499105F00DF1267 /* CurrencyView.swift */; };
+		F1452E802499105F00DF1267 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1452E7C2499105F00DF1267 /* PickerView.swift */; };
+		F1452E832499124500DF1267 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1452E812499124500DF1267 /* SignUpViewController.swift */; };
+		F1452E842499124500DF1267 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1452E822499124500DF1267 /* SignInViewController.swift */; };
 		F1563F962421091600586781 /* Configs.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1563F952421091600586781 /* Configs.generated.swift */; };
+		F15AD73024992D19005C7832 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AD72F24992D19005C7832 /* CurrenciesViewController.swift */; };
+		F15AD73224993515005C7832 /* TransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AD73124993515005C7832 /* TransferService.swift */; };
 		F169800524213DD900774568 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F169800424213DD900774568 /* Analytics.swift */; };
 		F17794112498C11A004D440C /* PublicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F177940C2498C11A004D440C /* PublicService.swift */; };
 		F17794122498C11A004D440C /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F177940D2498C11A004D440C /* HTTPRequest.swift */; };
@@ -58,7 +66,7 @@
 		F1C327FA2479CF10008A6D95 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C327F92479CF10008A6D95 /* AuthService.swift */; };
 		F1C327FC2479CF1A008A6D95 /* AuthServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C327FB2479CF1A008A6D95 /* AuthServiceImpl.swift */; };
 		F1C327FF2479D413008A6D95 /* RxSwift+AnyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C327FE2479D413008A6D95 /* RxSwift+AnyObject.swift */; };
-		F1C32804247ABC5B008A6D95 /* BotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32803247ABC5B008A6D95 /* BotsViewController.swift */; };
+		F1C32804247ABC5B008A6D95 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32803247ABC5B008A6D95 /* WelcomeViewController.swift */; };
 		F1C32807247ABD2F008A6D95 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32806247ABD2F008A6D95 /* DashboardViewController.swift */; };
 		F1C32809247ABD93008A6D95 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32808247ABD93008A6D95 /* SettingsViewController.swift */; };
 		F1C3280B247ABED8008A6D95 /* Flows.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C3280A247ABED8008A6D95 /* Flows.storyboard */; };
@@ -69,7 +77,7 @@
 		F1C32833247B40F5008A6D95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32832247B40F5008A6D95 /* User.swift */; };
 		F1C32836247B4856008A6D95 /* ExchangesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32835247B4856008A6D95 /* ExchangesService.swift */; };
 		F1C32838247B4896008A6D95 /* ExchangeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C32837247B4896008A6D95 /* ExchangeServiceImpl.swift */; };
-		F1C381282490081000124BF7 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C381272490081000124BF7 /* BuyViewController.swift */; };
+		F1C381282490081000124BF7 /* BuyCryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C381272490081000124BF7 /* BuyCryptoViewController.swift */; };
 		F1C3813F2490258700124BF7 /* SocketOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C3813E2490258700124BF7 /* SocketOrderTableViewCell.swift */; };
 		F1CBFAB62423643400FD4F2E /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBFAB52423643400FD4F2E /* Localization.swift */; };
 		F1CBFAB82423646900FD4F2E /* Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1CBFAB72423646900FD4F2E /* Errors.strings */; };
@@ -85,6 +93,10 @@
 		F1EAB87A2479868D006C2590 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1EAB8792479868D006C2590 /* GoogleService-Info.plist */; };
 		F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAB87D247992E5006C2590 /* UIViewController.swift */; };
 		F1EF5A032498FA680057F022 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF5A022498FA670057F022 /* WebSocket.swift */; };
+		F1F2825F2499221B005CF3F5 /* BuyCryptoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2825E2499221B005CF3F5 /* BuyCryptoProtocols.swift */; };
+		F1F2826124992251005CF3F5 /* BuyCryptoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2826024992251005CF3F5 /* BuyCryptoRouter.swift */; };
+		F1F2826324992265005CF3F5 /* BuyCryptoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2826224992265005CF3F5 /* BuyCryptoPresenter.swift */; };
+		F1F282652499227A005CF3F5 /* BuyCryptoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F282642499227A005CF3F5 /* BuyCryptoInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +137,15 @@
 		F12594F8248FB12C0071BFDF /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		F12594FB248FB2030071BFDF /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
 		F12594FD248FB2130071BFDF /* OrderServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceImpl.swift; sourceTree = "<group>"; };
+		F1452E792499105F00DF1267 /* AvailableAmountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableAmountView.swift; sourceTree = "<group>"; };
+		F1452E7A2499105F00DF1267 /* AmountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		F1452E7B2499105F00DF1267 /* CurrencyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyView.swift; sourceTree = "<group>"; };
+		F1452E7C2499105F00DF1267 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		F1452E812499124500DF1267 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F1452E822499124500DF1267 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F1563F952421091600586781 /* Configs.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.generated.swift; sourceTree = "<group>"; };
+		F15AD72F24992D19005C7832 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
+		F15AD73124993515005C7832 /* TransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferService.swift; sourceTree = "<group>"; };
 		F169800424213DD900774568 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		F177940C2498C11A004D440C /* PublicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicService.swift; sourceTree = "<group>"; };
 		F177940D2498C11A004D440C /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
@@ -165,7 +185,7 @@
 		F1C327F92479CF10008A6D95 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F1C327FB2479CF1A008A6D95 /* AuthServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceImpl.swift; sourceTree = "<group>"; };
 		F1C327FE2479D413008A6D95 /* RxSwift+AnyObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+AnyObject.swift"; sourceTree = "<group>"; };
-		F1C32803247ABC5B008A6D95 /* BotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotsViewController.swift; sourceTree = "<group>"; };
+		F1C32803247ABC5B008A6D95 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F1C32806247ABD2F008A6D95 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F1C32808247ABD93008A6D95 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F1C3280A247ABED8008A6D95 /* Flows.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Flows.storyboard; sourceTree = "<group>"; };
@@ -176,7 +196,7 @@
 		F1C32832247B40F5008A6D95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F1C32835247B4856008A6D95 /* ExchangesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesService.swift; sourceTree = "<group>"; };
 		F1C32837247B4896008A6D95 /* ExchangeServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeServiceImpl.swift; sourceTree = "<group>"; };
-		F1C381272490081000124BF7 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		F1C381272490081000124BF7 /* BuyCryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoViewController.swift; sourceTree = "<group>"; };
 		F1C3813E2490258700124BF7 /* SocketOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketOrderTableViewCell.swift; sourceTree = "<group>"; };
 		F1CBFAB52423643400FD4F2E /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		F1CBFAB72423646900FD4F2E /* Errors.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Errors.strings; sourceTree = "<group>"; };
@@ -194,6 +214,10 @@
 		F1EAB8792479868D006C2590 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1EAB87D247992E5006C2590 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F1EF5A022498FA670057F022 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		F1F2825E2499221B005CF3F5 /* BuyCryptoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoProtocols.swift; sourceTree = "<group>"; };
+		F1F2826024992251005CF3F5 /* BuyCryptoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoRouter.swift; sourceTree = "<group>"; };
+		F1F2826224992265005CF3F5 /* BuyCryptoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoPresenter.swift; sourceTree = "<group>"; };
+		F1F282642499227A005CF3F5 /* BuyCryptoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +371,18 @@
 			path = Order;
 			sourceTree = "<group>";
 		};
+		F1452E852499202200DF1267 /* Buy */ = {
+			isa = PBXGroup;
+			children = (
+				F1C381272490081000124BF7 /* BuyCryptoViewController.swift */,
+				F1F2825E2499221B005CF3F5 /* BuyCryptoProtocols.swift */,
+				F1F2826024992251005CF3F5 /* BuyCryptoRouter.swift */,
+				F1F2826224992265005CF3F5 /* BuyCryptoPresenter.swift */,
+				F1F282642499227A005CF3F5 /* BuyCryptoInteractor.swift */,
+			);
+			path = Buy;
+			sourceTree = "<group>";
+		};
 		F169800324213DC300774568 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,8 +499,8 @@
 		F1BE9731248F825D0072782F /* Orders */ = {
 			isa = PBXGroup;
 			children = (
+				F1452E852499202200DF1267 /* Buy */,
 				F1BE9732248F827A0072782F /* OrdersViewController.swift */,
-				F1C381272490081000124BF7 /* BuyViewController.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -472,6 +508,8 @@
 		F1C327F42479B389008A6D95 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				F1452E822499124500DF1267 /* SignInViewController.swift */,
+				F1452E812499124500DF1267 /* SignUpViewController.swift */,
 				F1C327F52479B408008A6D95 /* BaseAuthViewController.swift */,
 			);
 			path = Authorization;
@@ -484,6 +522,7 @@
 				F12594FA248FB1F30071BFDF /* Order */,
 				F1C32834247B4848008A6D95 /* Exchanges */,
 				F1C327F82479CF04008A6D95 /* Auth */,
+				F15AD73124993515005C7832 /* TransferService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -514,19 +553,20 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		F1C32801247ABB5F008A6D95 /* Dashboard */ = {
+		F1C32801247ABB5F008A6D95 /* Wallets */ = {
 			isa = PBXGroup;
 			children = (
 				F1C32806247ABD2F008A6D95 /* DashboardViewController.swift */,
+				F15AD72F24992D19005C7832 /* CurrenciesViewController.swift */,
 			);
-			path = Dashboard;
+			path = Wallets;
 			sourceTree = "<group>";
 		};
 		F1C32802247ABBC8008A6D95 /* Bots */ = {
 			isa = PBXGroup;
 			children = (
 				F1062721247C668A00701A77 /* ExchangesViewController.swift */,
-				F1C32803247ABC5B008A6D95 /* BotsViewController.swift */,
+				F1C32803247ABC5B008A6D95 /* WelcomeViewController.swift */,
 				F17B50B4247C673D0093AB1B /* LinkExchangeViewController.swift */,
 			);
 			path = Bots;
@@ -535,6 +575,10 @@
 		F1C32827247AF4E5008A6D95 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F1452E7A2499105F00DF1267 /* AmountView.swift */,
+				F1452E792499105F00DF1267 /* AvailableAmountView.swift */,
+				F1452E7B2499105F00DF1267 /* CurrencyView.swift */,
+				F1452E7C2499105F00DF1267 /* PickerView.swift */,
 				F1C32828247AF4F7008A6D95 /* UITableViewCell */,
 			);
 			path = Views;
@@ -588,7 +632,7 @@
 				F1BE9731248F825D0072782F /* Orders */,
 				F1C327F42479B389008A6D95 /* Authorization */,
 				F1C32802247ABBC8008A6D95 /* Bots */,
-				F1C32801247ABB5F008A6D95 /* Dashboard */,
+				F1C32801247ABB5F008A6D95 /* Wallets */,
 				F1C32800247ABB45008A6D95 /* Settings */,
 			);
 			path = Modules;
@@ -881,13 +925,17 @@
 				F1563F962421091600586781 /* Configs.generated.swift in Sources */,
 				F1BE9727248F6E700072782F /* MarketDepth.swift in Sources */,
 				F1BE9733248F827A0072782F /* OrdersViewController.swift in Sources */,
+				F1452E7F2499105F00DF1267 /* CurrencyView.swift in Sources */,
 				F1C327FC2479CF1A008A6D95 /* AuthServiceImpl.swift in Sources */,
 				F17B50B5247C673D0093AB1B /* LinkExchangeViewController.swift in Sources */,
+				F15AD73024992D19005C7832 /* CurrenciesViewController.swift in Sources */,
 				F17794262498C143004D440C /* Tick.swift in Sources */,
 				F1CBFABD24239F3F00FD4F2E /* CoreContainer.swift in Sources */,
 				F1BE9728248F6E700072782F /* Candlestick.swift in Sources */,
+				F15AD73224993515005C7832 /* TransferService.swift in Sources */,
 				F1BE9730248F6EC00072782F /* String+Extension.swift in Sources */,
 				F1BE972D248F6E700072782F /* TickerPriceChange.swift in Sources */,
+				F1452E802499105F00DF1267 /* PickerView.swift in Sources */,
 				F1CBFAB62423643400FD4F2E /* Localization.swift in Sources */,
 				F12594FE248FB2130071BFDF /* OrderServiceImpl.swift in Sources */,
 				F1BE9724248F6E700072782F /* Account.swift in Sources */,
@@ -898,17 +946,20 @@
 				F17794132498C11A004D440C /* BittrexRequest.swift in Sources */,
 				F1062722247C668A00701A77 /* ExchangesViewController.swift in Sources */,
 				F1CBFAC12423A26E00FD4F2E /* ServicesContainer.swift in Sources */,
+				F1452E7D2499105F00DF1267 /* AvailableAmountView.swift in Sources */,
 				F12594FC248FB2030071BFDF /* OrderService.swift in Sources */,
 				F17794272498C143004D440C /* Balance.swift in Sources */,
 				F1CBFAC82423C0D000FD4F2E /* KeychainCache.swift in Sources */,
 				F1C327FA2479CF10008A6D95 /* AuthService.swift in Sources */,
 				F1BE9729248F6E700072782F /* TickerPrice.swift in Sources */,
 				F17794282498C143004D440C /* MarketHistory.swift in Sources */,
+				F1F282652499227A005CF3F5 /* BuyCryptoInteractor.swift in Sources */,
 				F17794252498C143004D440C /* OrderBook.swift in Sources */,
 				F169800524213DD900774568 /* Analytics.swift in Sources */,
 				F1EF5A032498FA680057F022 /* WebSocket.swift in Sources */,
 				F1BE972C248F6E700072782F /* ExchangeInfo.swift in Sources */,
 				F1C327F62479B408008A6D95 /* BaseAuthViewController.swift in Sources */,
+				F1F2826324992265005CF3F5 /* BuyCryptoPresenter.swift in Sources */,
 				F17794292498C143004D440C /* MarketSummary.swift in Sources */,
 				F1BE9718248F6E1C0072782F /* BinanceAPI.swift in Sources */,
 				F12594F9248FB12C0071BFDF /* OrderTableViewCell.swift in Sources */,
@@ -916,6 +967,8 @@
 				F1C3282A247AF50D008A6D95 /* SwitchTableViewCell.swift in Sources */,
 				F17794242498C143004D440C /* Market.swift in Sources */,
 				F17794152498C11A004D440C /* MarketService.swift in Sources */,
+				F1F2826124992251005CF3F5 /* BuyCryptoRouter.swift in Sources */,
+				F1452E832499124500DF1267 /* SignUpViewController.swift in Sources */,
 				F109FB39247C6E690041B5A7 /* User+Current.swift in Sources */,
 				F11831A6248FBD5100C949F3 /* LoadingViewController.swift in Sources */,
 				F1BE9725248F6E700072782F /* BookTicker.swift in Sources */,
@@ -924,13 +977,16 @@
 				F1D004C3247BF6CF00EBEFE8 /* Exchange.swift in Sources */,
 				F17794142498C11A004D440C /* AccountService.swift in Sources */,
 				F1C32830247B2999008A6D95 /* DatabaseClient.swift in Sources */,
+				F1452E7E2499105F00DF1267 /* AmountView.swift in Sources */,
 				F177942A2498C143004D440C /* Currency.swift in Sources */,
-				F1C381282490081000124BF7 /* BuyViewController.swift in Sources */,
-				F1C32804247ABC5B008A6D95 /* BotsViewController.swift in Sources */,
+				F1C381282490081000124BF7 /* BuyCryptoViewController.swift in Sources */,
+				F1C32804247ABC5B008A6D95 /* WelcomeViewController.swift in Sources */,
 				F1BE9726248F6E700072782F /* Order.swift in Sources */,
 				F1C32833247B40F5008A6D95 /* User.swift in Sources */,
 				F17794232498C143004D440C /* OpenOrder.swift in Sources */,
+				F1452E842499124500DF1267 /* SignInViewController.swift in Sources */,
 				F1C3282E247AFD86008A6D95 /* SettingsViewModel.swift in Sources */,
+				F1F2825F2499221B005CF3F5 /* BuyCryptoProtocols.swift in Sources */,
 				F1C327FF2479D413008A6D95 /* RxSwift+AnyObject.swift in Sources */,
 				F1BE972B248F6E700072782F /* AggregatedTrade.swift in Sources */,
 				F1C3282C247AFBD8008A6D95 /* UITableView.swift in Sources */,

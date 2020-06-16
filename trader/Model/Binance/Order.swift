@@ -89,7 +89,6 @@ public struct Order: Codable {
     public var time: Int
     public var isWorking: Bool
     
-    
     init() {
         self.symbol = ""
         self.orderId = 1

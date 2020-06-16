@@ -237,6 +237,14 @@ public class BinanceAPI {
         runRequest(request: request, success: success, failure: failure)
     }
 
+    public func placeOrder(market: String, quantity: Double, rate: Double, success: SuccessCallback<OrderResponse>? = nil, failure: FailureCallback? = nil) {
+        let params = ["symbol": market,
+                      "quantity": quantity,
+                      "rate": rate] as [String : Any]
+        guard let request = self.signedRequest(for: "v3/order", method: .post, params: params) else { return }
+        runRequest(request: request, success: success, failure: failure)
+    }
+    
     public func getOrder(symbol: String, orderId: Int, success: SuccessCallback<Order>? = nil, failure: FailureCallback? = nil) {
         let params: [String: Any] = ["symbol": symbol, "orderId": orderId]
         guard let request = self.signedRequest(for: "v3/order", method: .get, params: params) else { return }

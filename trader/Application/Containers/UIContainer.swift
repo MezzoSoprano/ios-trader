@@ -14,12 +14,28 @@ protocol UIContainer {
     func root() -> UIViewController
     func auth() -> UIViewController
     func main() -> UIViewController
+    func buy() -> UIViewController
+    func currenciesFrom(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController
+    func currenciesTo(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController
     func exchanges(onSelect: @escaping Handler<Exchange>) -> UIViewController
     func linkExchange(exchange: Exchange) -> UIViewController
 }
 
 // swiftlint:disable force_try
 extension DependencyContainer: UIContainer {
+    
+    func currenciesFrom(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController {
+        return try! resolve(arguments: selected, onSelect) as CurrenciesFromViewController
+    }
+    
+    func currenciesTo(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController {
+        return try! resolve(arguments: selected, onSelect) as CurrenciesToViewController
+    }
+    
+    
+    func buy() -> UIViewController {
+        return try! resolve() as BuyCryptoViewController
+    }
     
     func main() -> UIViewController {
         return try! resolve() as UITabBarController
@@ -59,7 +75,7 @@ extension DependencyContainer {
             
             let controllers = [
                 try container.resolve() as OrdersViewController,
-                try container.resolve() as BotsViewController,
+                try container.resolve() as WelcomeViewController,
                 try container.resolve() as SettingsViewController
             ]
             
@@ -86,14 +102,14 @@ extension DependencyContainer {
             return controller
         }
         
-        container.register { () -> BotsViewController in
-            let controller = UIStoryboard.flows.instantiateViewController() as BotsViewController
+        container.register { () -> WelcomeViewController in
+            let controller = UIStoryboard.flows.instantiateViewController() as WelcomeViewController
             controller.tabBarItem.image = #imageLiteral(resourceName: "wallet")
             return controller
         }
         
-        container.register { () -> BuyViewController in
-            let controller = UIStoryboard.flows.instantiateViewController() as BuyViewController
+        container.register { () -> BuyCryptoViewController in
+            let controller = UIStoryboard.flows.instantiateViewController() as BuyCryptoViewController
             controller.tabBarItem.image = #imageLiteral(resourceName: "wallet")
             return controller
         }

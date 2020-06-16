@@ -6,7 +6,6 @@
 //  Copyright © 2020 Soprano. All rights reserved.
 //
 
-
 import Foundation
 
 public struct TickerPriceChange: Codable {

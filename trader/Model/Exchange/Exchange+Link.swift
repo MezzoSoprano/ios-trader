@@ -11,9 +11,11 @@ import Foundation
 extension Exchange {
     
     struct Link: Codable {
+        
         let name: String
+        let passsword: String
         let apiKey: String
-        let secretKey: String
+        var secretKey: String
         let exchangeName: String
     }
 }

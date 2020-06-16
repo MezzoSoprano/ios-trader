@@ -70,8 +70,13 @@ extension DependencyContainer {
         }
         
         container.register(.singleton) { () -> BinanceAPI in
-            return BinanceAPI(key: "XtA43wkvvCJMcmNvTbAuVzQTOocMT2Ym6JSaE14TLTpyIr99GTDr4fTMz2GagDDB",
-                              secret: "rNIoEgVCIw3nkfKtK7z3zqS3I9wOOPejlX8l2hxg8SKIoZTL7ssO1vfpcYilHfFq")
+            return BinanceAPI(key: "?",
+                              secret: "?")
+        }
+        
+        container.register(.singleton) { () -> Bittrex in
+            return Bittrex.init(apiKey: "?",
+                                apiSecret: "?")
         }
         
         return container

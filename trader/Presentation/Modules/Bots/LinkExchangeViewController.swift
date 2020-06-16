@@ -13,6 +13,7 @@ class LinkExchangeViewController: UIViewController {
     @IBOutlet weak var titleLabel: UITextField!
     @IBOutlet weak var apiKeyLabel: UITextField!
     @IBOutlet weak var secretApiKeyLabel: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +29,10 @@ extension LinkExchangeViewController {
     @IBAction func linkExchange(_ sender: Any) {
         guard let name = titleLabel.text,
             let apiKey =  apiKeyLabel.text,
-            let secretKey = secretApiKeyLabel.text else { return }
+            let secretKey = secretApiKeyLabel.text,
+            let password = passwordTextField.text else { return }
         
-        exchangeService.link(exchange: .init(name: name, apiKey: apiKey,
+        exchangeService.link(exchange: .init(name: name, passsword: password, apiKey: apiKey,
                                              secretKey: secretKey,
                                              exchangeName: exchange.rawValue))
             .subscribe(onSuccess: { [weak self] in self?.succeed() })

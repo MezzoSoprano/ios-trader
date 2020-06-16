@@ -10,6 +10,7 @@
 import APIKit
 
 public final class Bittrex {
+    
     private let auth: AuthBittrex
     private let nonce: String
     
@@ -126,3 +127,9 @@ extension Bittrex {
         Session.shared.send(httpRequest, handler: handler)
     }
 }
+
+//class ExchangeAPI {
+//    
+//    let apiKey: String?
+//    let apiSecret: String?
+//}

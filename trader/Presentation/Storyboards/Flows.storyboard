@@ -10,7 +10,7 @@
         <!--Bots-->
         <scene sceneID="qfn-0s-IRv">
             <objects>
-                <viewController storyboardIdentifier="BotsViewController" title="Bots" id="Ial-2B-Udr" customClass="BotsViewController" customModule="trader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" title="Bots" id="Ial-2B-Udr" customClass="WelcomeViewController" customModule="trader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hof-m8-pNk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,8 +21,8 @@
                                     <constraint firstAttribute="width" secondItem="CAV-zv-W4i" secondAttribute="height" multiplier="135:64" id="4ek-hX-TLd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bot strategy - take easy profit with our bots!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1g-xU-k0j">
-                                <rect key="frame" x="50" y="405" width="314" height="38.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start using our app to create your orders!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1g-xU-k0j">
+                                <rect key="frame" x="50" y="405" width="314" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5ju-Rj-Sta"/>
                                 </constraints>
-                                <state key="normal" title="Create new Bot">
+                                <state key="normal" title="Link exchange">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -265,7 +265,7 @@
         <!--Buy BTC-->
         <scene sceneID="Fea-8L-1V9">
             <objects>
-                <viewController storyboardIdentifier="BuyViewController" title="Buy BTC" id="LRN-ea-X6p" customClass="BuyViewController" customModule="trader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BuyCryptoViewController" title="Buy BTC" id="LRN-ea-X6p" customClass="BuyCryptoViewController" customModule="trader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0cz-VF-ALk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -484,6 +484,7 @@
                     </view>
                     <connections>
                         <outlet property="amountLabel" destination="yU0-SC-IV4" id="Ovl-IP-ute"/>
+                        <outlet property="ordersTableView" destination="UPh-Mz-drg" id="NFW-Pu-FP4"/>
                         <outlet property="priceLabel" destination="IWh-oJ-9O4" id="0Ua-hX-PdA"/>
                         <outlet property="totalLabel" destination="MMK-2w-Xbn" id="Wva-PX-lfR"/>
                     </connections>
@@ -501,7 +502,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="heV-mt-dMs">
-                                <rect key="frame" x="20" y="223" width="374" height="225.5"/>
+                                <rect key="frame" x="20" y="223" width="374" height="284"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMy-At-qoP">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="18.5"/>
@@ -518,8 +519,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yLq-Tn-iVF">
+                                        <rect key="frame" x="0.0" y="175.5" width="374" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knw-ef-Ayu">
-                                        <rect key="frame" x="0.0" y="175.5" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="234" width="374" height="50"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6n9-A4-w8k"/>
@@ -567,6 +573,7 @@
                     </view>
                     <connections>
                         <outlet property="apiKeyLabel" destination="Qio-bm-eAC" id="3s0-pE-3RW"/>
+                        <outlet property="passwordTextField" destination="yLq-Tn-iVF" id="Zlb-O2-LSy"/>
                         <outlet property="secretApiKeyLabel" destination="Osg-D0-SLM" id="8BO-v4-Bfb"/>
                         <outlet property="titleLabel" destination="bMy-At-qoP" id="3Mb-CG-rVw"/>
                     </connections>
