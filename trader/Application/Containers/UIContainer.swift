@@ -58,8 +58,8 @@ extension DependencyContainer {
             controller.tabBar.tintColor = .systemYellow
             
             let controllers = [
-                try container.resolve() as DashboardViewController,
                 try container.resolve() as OrdersViewController,
+                try container.resolve() as BotsViewController,
                 try container.resolve() as SettingsViewController
             ]
             
@@ -88,13 +88,19 @@ extension DependencyContainer {
         
         container.register { () -> BotsViewController in
             let controller = UIStoryboard.flows.instantiateViewController() as BotsViewController
-            controller.tabBarItem.image = #imageLiteral(resourceName: "icon_bot")
+            controller.tabBarItem.image = #imageLiteral(resourceName: "wallet")
+            return controller
+        }
+        
+        container.register { () -> BuyViewController in
+            let controller = UIStoryboard.flows.instantiateViewController() as BuyViewController
+            controller.tabBarItem.image = #imageLiteral(resourceName: "wallet")
             return controller
         }
         
         container.register { () -> OrdersViewController in
             let controller = UIStoryboard.flows.instantiateViewController() as OrdersViewController
-            controller.tabBarItem.image = #imageLiteral(resourceName: "icon_bot")
+            controller.tabBarItem.image = #imageLiteral(resourceName: "icon_dashboard")
             controller.orderService = try! container.resolve()
             return controller
         }

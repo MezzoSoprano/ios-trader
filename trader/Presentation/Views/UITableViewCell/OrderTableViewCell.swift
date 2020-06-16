@@ -14,6 +14,7 @@ class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var sideLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
 }
 
 extension OrderTableViewCell {
@@ -24,5 +25,7 @@ extension OrderTableViewCell {
         self.sideLabel.text = order.side.rawValue
         self.sideLabel.textColor = order.side == .sell ? .red : .green
         self.priceLabel.text = order.formattedPrice.map { String(format: "%.2f", $0) }
+        self.statusLabel.text = order.status.rawValue
+        self.statusLabel.textColor = order.status == .new || order.status == .filled ? .green : .red
     }
 }
