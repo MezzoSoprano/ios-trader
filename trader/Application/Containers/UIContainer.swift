@@ -15,8 +15,8 @@ protocol UIContainer {
     func auth() -> UIViewController
     func main() -> UIViewController
     func buy() -> UIViewController
-    func currenciesFrom(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController
-    func currenciesTo(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController
+//    func currenciesFrom(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController
+//    func currenciesTo(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController
     func exchanges(onSelect: @escaping Handler<Exchange>) -> UIViewController
     func linkExchange(exchange: Exchange) -> UIViewController
 }
@@ -24,14 +24,13 @@ protocol UIContainer {
 // swiftlint:disable force_try
 extension DependencyContainer: UIContainer {
     
-    func currenciesFrom(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController {
-        return try! resolve(arguments: selected, onSelect) as CurrenciesFromViewController
-    }
-    
-    func currenciesTo(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController {
-        return try! resolve(arguments: selected, onSelect) as CurrenciesToViewController
-    }
-    
+//    func currenciesFrom(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController {
+//        return try! resolve(arguments: selected, onSelect) as CurrenciesFromViewController
+//    }
+//
+//    func currenciesTo(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController {
+//        return try! resolve(arguments: selected, onSelect) as CurrenciesToViewController
+//    }
     
     func buy() -> UIViewController {
         return try! resolve() as BuyCryptoViewController
@@ -117,6 +116,7 @@ extension DependencyContainer {
         container.register { () -> OrdersViewController in
             let controller = UIStoryboard.flows.instantiateViewController() as OrdersViewController
             controller.tabBarItem.image = #imageLiteral(resourceName: "icon_dashboard")
+            controller.title = "Orders"
             controller.orderService = try! container.resolve()
             return controller
         }

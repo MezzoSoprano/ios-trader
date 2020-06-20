@@ -16,6 +16,5 @@ extension Exchange {
         let passsword: String
         let apiKey: String
         var secretKey: String
-        let exchangeName: String
     }
 }

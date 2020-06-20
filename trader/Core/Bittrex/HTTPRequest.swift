@@ -10,6 +10,7 @@ import APIKit
 import CryptoSwift
 
 public struct HTTPRequest<Request: BittrexRequest>: APIKit.Request {
+    
     private let baseRequest: Request
     private let auth: AuthBittrex
     private let nonce: String

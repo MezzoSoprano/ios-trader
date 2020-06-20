@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import CryptoKit
 
 class RootViewController: UIViewController {
     
@@ -18,6 +19,12 @@ class RootViewController: UIViewController {
             .subscribeOn(MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] in $0 == nil ? self?.presentWelcome() : self?.presentMain() })
             .disposed(by: rx.disposeBag)
+        
+//        assembly.core.binance().account(success: { acc in
+//            print(acc)
+//        }) { err in
+//            print(err)
+//        }
     }
     
     var authService: AuthService!

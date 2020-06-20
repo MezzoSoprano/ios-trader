@@ -17,10 +17,15 @@ protocol CoreContainer {
     
     func keychain() -> KeyedCache
     func firebaseAuth() -> FUIAuth
+    func binance() -> BinanceAPI
 }
 
 // swiftlint:disable force_try
 extension DependencyContainer: CoreContainer {
+    
+    func binance() -> BinanceAPI {
+        return try! resolve() as BinanceAPI
+    }
         
     func firebaseAuth() -> FUIAuth {
         return try! resolve() as FUIAuth
@@ -70,8 +75,8 @@ extension DependencyContainer {
         }
         
         container.register(.singleton) { () -> BinanceAPI in
-            return BinanceAPI(key: "?",
-                              secret: "?")
+            BinanceAPI(key: "XtA43wkvvCJMcmNvTbAuVzQTOocMT2Ym6JSaE14TLTpyIr99GTDr4fTMz2GagDDB",
+                       secret: "rNIoEgVCIw3nkfKtK7z3zqS3I9wOOPejlX8l2hxg8SKIoZTL7ssO1vfpcYilHfFq")
         }
         
         container.register(.singleton) { () -> Bittrex in

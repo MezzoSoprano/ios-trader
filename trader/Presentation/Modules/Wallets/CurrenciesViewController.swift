@@ -58,5 +58,5 @@ class Currencies<Element>: UITableViewController where Element: Equatable & Cust
     }
 }
 
-final class CurrenciesFromViewController: Currencies<AccountBalance> { }
-final class CurrenciesToViewController: Currencies<AccountBalance> { }
+//final class CurrenciesFromViewController: Currencies<AccountBalance> { }
+//final class CurrenciesToViewController: Currencies<AccountBalance> { }

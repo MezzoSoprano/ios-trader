@@ -20,19 +20,19 @@ class BuyCryptoRouter: BuyCryptoRouterInput {
     var output: BuyCryptoRouterOutput!
     
     func presentCurrenciesFrom(selected: AccountBalance?) {
-        let controller = assembly.ui.currenciesFrom(selected: selected) { balance in
-            self.output.currencyFromSelected(currency: balance)
-        }
-        
-        view.present(controller, animated: true)
+//        let controller = assembly.ui.currenciesFrom(selected: selected) { balance in
+//            self.output.currencyFromSelected(currency: balance)
+//        }
+//        
+//        view.present(controller, animated: true)
     }
     
     func presentCurrenciesTo(selected: AccountBalance?) {
-        let controller = assembly.ui.currenciesTo(selected: selected) { balance in
-            self.output.currencyToSelected(currency: balance)
-        }
-        
-        view.present(controller, animated: true)
+//        let controller = assembly.ui.currenciesTo(selected: selected) { balance in
+//            self.output.currencyToSelected(currency: balance)
+//        }
+//
+//        view.present(controller, animated: true)
     }
     
     func closeModule() {

@@ -21,8 +21,7 @@ public struct Account: Codable {
     public var balances: [AccountBalance]
 }
 
-public struct AccountBalance: Codable & CustomStringConvertible & Equatable {
-    public var description: String = ""
+public struct AccountBalance: Codable {
     
     public var asset: String
     public var free: String

@@ -66,15 +66,23 @@ extension BuyCryptoViewController: BuyCryptoViewInput {
         ordersTableView.reloadData()
     }
     
-    func configure(with error: Error) {
-        let alert: UIAlertController = .init(title: "Error happend while procceding", message: error.localizedDescription, preferredStyle: .alert)
-        present(alert, animated: true)
-    }
+//    func configure(with error: Error) {
+//        let alert: UIAlertController = .init(title: "Error happend while procceding", message: error.localizedDescription, preferredStyle: .alert)
+//        present(alert, animated: true)
+//    }s
     
     func configureWithSuccess() {
         let alert: UIAlertController = .init(title: "Succed!",
                                              message: "New Order was created!",
                                              preferredStyle: .alert)
+        present(alert, animated: true)
+    }
+}
+
+extension UIViewController {
+    
+    func configure(with error: Error) {
+        let alert: UIAlertController = .init(title: "Error happend while procceding", message: error.localizedDescription, preferredStyle: .alert)
         present(alert, animated: true)
     }
 }

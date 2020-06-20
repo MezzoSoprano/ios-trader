@@ -33,7 +33,7 @@ class OrdersViewController: UITableViewController {
 extension OrdersViewController {
     
     @IBAction func add(_ sender: Any) {
-        let controller = assembly.ui
+//        let controller = assembly.ui
     }
     
     @IBAction func refresh(_ sender: UIRefreshControl) {
@@ -47,6 +47,10 @@ extension OrdersViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return orders.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "BINANCE"
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

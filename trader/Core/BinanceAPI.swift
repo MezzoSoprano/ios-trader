@@ -24,8 +24,8 @@ public enum RequestMethod: String {
 public class BinanceAPI {
 
     private let baseUrl = "https://api.binance.com/api/"
-    private var key: String
-    private var secret: String
+    var key: String
+    var secret: String
     private var decoder = JSONDecoder()
 
     public init(key: String, secret: String) {
@@ -284,5 +284,4 @@ public class BinanceAPI {
         guard let request = self.signedRequest(for: "v3/myTrades", method: .get, params: ["symbol": symbol, "limit": limit]) else { return }
         runRequest(request: request, success: success, failure: failure)
     }
-
 }

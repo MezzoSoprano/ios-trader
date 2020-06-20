@@ -32,7 +32,10 @@ extension DependencyContainer {
         }
         
         container.register(.singleton) { () -> ExchangeService in
-            return ExchangeServiceImpl(client: try! container.resolve(), ref: try! container.resolve())
+            return ExchangeServiceImpl(client: try! container.resolve(),
+                                       ref: try! container.resolve(),
+                                       binance: try! container.resolve(),
+                                       cache: try! container.resolve())
         }
         
         container.register(.singleton) { () -> OrderService in
