@@ -84,9 +84,18 @@ extension BuyCryptoViewController: UITableViewDataSource {
                            amount: amount,
                            price: price)
             .subscribeOn(MainScheduler.asyncInstance)
-            .subscribe(onSuccess: { _ in print("success")
-            }, onError: { err in self.presentAlert(with: err.localizedDescription) })
+            .subscribe(onSuccess: { _ in
+                DispatchQueue.main.async { self.sucess() }
+            }, onError: { err in
+                DispatchQueue.main.async { self.presentAlert(with: err.localizedDescription) }
+            })
             .disposed(by: rx.disposeBag)
+    }
+    
+    func sucess() {
+        let c = UIAlertController.init(title: "Succeded!", message: "Tour order was created!", preferredStyle: .alert)
+        c.addAction(.init(title: "OK", style: .cancel, handler: { _ in self.navigationController?.popToRootViewController(animated: true) }))
+        present(c, animated: true)
     }
 }
 
