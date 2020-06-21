@@ -93,6 +93,9 @@
 		F1EAB87A2479868D006C2590 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1EAB8792479868D006C2590 /* GoogleService-Info.plist */; };
 		F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAB87D247992E5006C2590 /* UIViewController.swift */; };
 		F1EAD663249ED68000FACD55 /* LinkedExchangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAD662249ED68000FACD55 /* LinkedExchangesViewController.swift */; };
+		F1EAD665249F4FF500FACD55 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAD664249F4FF500FACD55 /* AccountsViewController.swift */; };
+		F1EAD668249F529400FACD55 /* WalletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAD667249F529400FACD55 /* WalletService.swift */; };
+		F1EAD66A249F52A000FACD55 /* WalletServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAD669249F52A000FACD55 /* WalletServiceImpl.swift */; };
 		F1EF5A032498FA680057F022 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF5A022498FA670057F022 /* WebSocket.swift */; };
 		F1F2825F2499221B005CF3F5 /* BuyCryptoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2825E2499221B005CF3F5 /* BuyCryptoProtocols.swift */; };
 		F1F2826124992251005CF3F5 /* BuyCryptoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2826024992251005CF3F5 /* BuyCryptoRouter.swift */; };
@@ -215,6 +218,9 @@
 		F1EAB8792479868D006C2590 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1EAB87D247992E5006C2590 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F1EAD662249ED68000FACD55 /* LinkedExchangesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedExchangesViewController.swift; sourceTree = "<group>"; };
+		F1EAD664249F4FF500FACD55 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		F1EAD667249F529400FACD55 /* WalletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletService.swift; sourceTree = "<group>"; };
+		F1EAD669249F52A000FACD55 /* WalletServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletServiceImpl.swift; sourceTree = "<group>"; };
 		F1EF5A022498FA670057F022 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		F1F2825E2499221B005CF3F5 /* BuyCryptoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoProtocols.swift; sourceTree = "<group>"; };
 		F1F2826024992251005CF3F5 /* BuyCryptoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoRouter.swift; sourceTree = "<group>"; };
@@ -520,6 +526,7 @@
 		F1C327F72479CEE6008A6D95 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F1EAD666249F528500FACD55 /* Wallet */,
 				F177942D2498C469004D440C /* Bittrex */,
 				F12594FA248FB1F30071BFDF /* Order */,
 				F1C32834247B4848008A6D95 /* Exchanges */,
@@ -560,6 +567,7 @@
 			children = (
 				F1C32806247ABD2F008A6D95 /* DashboardViewController.swift */,
 				F15AD72F24992D19005C7832 /* CurrenciesViewController.swift */,
+				F1EAD664249F4FF500FACD55 /* AccountsViewController.swift */,
 			);
 			path = Wallets;
 			sourceTree = "<group>";
@@ -632,8 +640,8 @@
 			isa = PBXGroup;
 			children = (
 				F1CBFAC32423B6AD00FD4F2E /* Application */,
-				F1BE9731248F825D0072782F /* Orders */,
 				F1C327F42479B389008A6D95 /* Authorization */,
+				F1BE9731248F825D0072782F /* Orders */,
 				F1C32802247ABBC8008A6D95 /* Exchanges */,
 				F1C32801247ABB5F008A6D95 /* Wallets */,
 				F1C32800247ABB45008A6D95 /* Settings */,
@@ -667,6 +675,15 @@
 				F1C3282B247AFBD8008A6D95 /* UITableView.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F1EAD666249F528500FACD55 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				F1EAD667249F529400FACD55 /* WalletService.swift */,
+				F1EAD669249F52A000FACD55 /* WalletServiceImpl.swift */,
+			);
+			path = Wallet;
 			sourceTree = "<group>";
 		};
 		F1EF5A012498FA410057F022 /* WebSockets */ = {
@@ -920,11 +937,13 @@
 				F1C3813F2490258700124BF7 /* SocketOrderTableViewCell.swift in Sources */,
 				F1C32807247ABD2F008A6D95 /* DashboardViewController.swift in Sources */,
 				F1CBFAC52423B6C700FD4F2E /* RootViewController.swift in Sources */,
+				F1EAD665249F4FF500FACD55 /* AccountsViewController.swift in Sources */,
 				F1C32809247ABD93008A6D95 /* SettingsViewController.swift in Sources */,
 				F1A0E00024220C4E007F26E1 /* LocalizedStrings.generated.swift in Sources */,
 				F1C32838247B4896008A6D95 /* ExchangeServiceImpl.swift in Sources */,
 				F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */,
 				F17794222498C143004D440C /* Address.swift in Sources */,
+				F1EAD668249F529400FACD55 /* WalletService.swift in Sources */,
 				F1563F962421091600586781 /* Configs.generated.swift in Sources */,
 				F1BE9727248F6E700072782F /* MarketDepth.swift in Sources */,
 				F1BE9733248F827A0072782F /* OrdersViewController.swift in Sources */,
@@ -984,6 +1003,7 @@
 				F1452E7E2499105F00DF1267 /* AmountView.swift in Sources */,
 				F177942A2498C143004D440C /* Currency.swift in Sources */,
 				F1C381282490081000124BF7 /* BuyCryptoViewController.swift in Sources */,
+				F1EAD66A249F52A000FACD55 /* WalletServiceImpl.swift in Sources */,
 				F1C32804247ABC5B008A6D95 /* WelcomeViewController.swift in Sources */,
 				F1BE9726248F6E700072782F /* Order.swift in Sources */,
 				F1C32833247B40F5008A6D95 /* User.swift in Sources */,

@@ -13,6 +13,9 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if assembly.core.binance().authorized {
+            self.navigationController?.setViewControllers([assembly.ui.linkedExchanges()], animated: true)
+        }
     }
 }
 

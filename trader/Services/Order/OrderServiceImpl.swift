@@ -19,8 +19,28 @@ class OrderServiceImpl {
 
 extension OrderServiceImpl: OrderService {
     
-    func remove(order: Order) {
-        binanceClient.cancelOrder(symbol: order.symbol, orderId: order.orderId, success: { _ in () }, failure: { print($0) })
+    func placeOrder(accountTo: AccountBalance, accountFrom: AccountBalance, amount: Double, price: Double) -> Single<Void> {
+        let sympol = accountFrom.asset + accountTo.asset
+        
+        return .create { observer in
+            self.binanceClient.placeOrder(market: sympol,
+                                          quantity: amount,
+                                          rate: price,
+                                          success: { _ in observer(.success(()))
+            },
+                                          failure: { observer(.error($0)) })
+            return Disposables.create()
+        }
+    }
+    
+    func remove(order: Order) -> Single<Void> {
+        return.create { o in
+            self.binanceClient.cancelOrder(symbol: order.symbol,
+                                           orderId: order.orderId,
+                                           success: { _ in o(.success(())) },
+                                           failure: {  o(.error($0)) })
+            return Disposables.create()
+        }
     }
 
     func all() -> Single<[Order]> {

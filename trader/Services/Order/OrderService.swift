@@ -11,5 +11,6 @@ import RxSwift
 protocol OrderService {
     
     func all() -> Single<[Order]>
-    func remove(order: Order)
+    func remove(order: Order) -> Single<Void>
+    func placeOrder(accountTo: AccountBalance, accountFrom: AccountBalance, amount: Double, price: Double) -> Single<Void>
 }

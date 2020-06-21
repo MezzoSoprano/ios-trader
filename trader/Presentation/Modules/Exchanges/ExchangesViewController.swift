@@ -21,6 +21,7 @@ class ExchangesViewController: UITableViewController {
             .map { $0.compactMap { $0 }}
             .subscribe(onSuccess: { [weak self] in
                 self?.exchanges = $0
+                if assembly.core.binance().authorized { self?.exchanges.removeAll { $0 == .binance } }
                 self?.tableView.reloadData()
             })
             .disposed(by: rx.disposeBag)

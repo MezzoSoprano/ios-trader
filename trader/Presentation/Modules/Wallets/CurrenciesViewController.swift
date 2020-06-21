@@ -9,54 +9,95 @@
 import UIKit
 import RxSwift
 
-class Currencies<Element>: UITableViewController where Element: Equatable & CustomStringConvertible {
-    
-    typealias Elements = [Element]
-    typealias OnSelect = (Element) -> Void
-    typealias Request = Single<Elements>
-    
-    private var elements = Elements()
-    var selected: Element?
-    var onSelect: OnSelect?
-    var request: Request!
+class CurrenciesFromViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = .init(frame: .zero)
         
-        navigationItem.largeTitleDisplayMode = .never
-        
-        request?
+        walletService
+            .activeAccounts(exchange: .binance, except: except)
             .observeOn(MainScheduler.asyncInstance)
-            .do(
-                onSuccess: { [weak self] in
-                    self?.elements = $0
-                    self?.tableView.reloadData()
-                }
-            )
-            .subscribe()
+            .subscribe(onSuccess: { [weak self] in
+                self?.balances = $0
+                self?.tableView.reloadData()
+            })
             .disposed(by: rx.disposeBag)
     }
     
+    var except: AccountBalance?
+    var selected: AccountBalance?
+    var onSelect: Handler<AccountBalance>?
+    var balances: [AccountBalance] = []
+    var walletService: WalletService!
+}
+
+extension CurrenciesFromViewController {
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return elements.count
+        return balances.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath)
-        let element = elements[indexPath.row]
-        cell.textLabel?.text = element.description
-        cell.accessoryType = element == selected ? .checkmark : .none
+        cell.textLabel?.text = balances[indexPath.row].asset
+        cell.detailTextLabel?.text = balances[indexPath.row].free
+        cell.accessoryType = balances[indexPath.row].asset == selected?.asset ? .checkmark : .none
+        if let acc = Double(balances[indexPath.row].free) {
+            cell.detailTextLabel?.textColor = acc > 0 ? .green : .red
+            if acc == 0 { cell.detailTextLabel?.textColor = .gray }
+        }
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        onSelect?(elements[indexPath.row])
-    }
-    
-    func element(at: IndexPath) -> Element {
-        return elements[at.row]
+        onSelect?(balances[indexPath.row])
     }
 }
 
-//final class CurrenciesFromViewController: Currencies<AccountBalance> { }
-//final class CurrenciesToViewController: Currencies<AccountBalance> { }
+class CurrenciesToViewController: UITableViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.tableFooterView = .init(frame: .zero)
+        
+        walletService
+            .accounts(exchange: .binance)
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe(onSuccess: { [weak self] in
+                self?.balances = $0
+                self?.tableView.reloadData()
+            })
+            .disposed(by: rx.disposeBag)
+    }
+    
+    var selected: AccountBalance?
+    var onSelect: Handler<AccountBalance>?
+    var balances: [AccountBalance] = []
+    var walletService: WalletService!
+}
+
+extension CurrenciesToViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return balances.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(for: indexPath)
+        cell.textLabel?.text = balances[indexPath.row].asset
+        cell.detailTextLabel?.text = balances[indexPath.row].free
+        cell.accessoryType = balances[indexPath.row].asset == selected?.asset ? .checkmark : .none
+        if let acc = Double(balances[indexPath.row].free) {
+            cell.detailTextLabel?.textColor = acc > 0 ? .green : .red
+            if acc == 0 { cell.detailTextLabel?.textColor = .gray }
+        }
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        onSelect?(balances[indexPath.row])
+    }
+}

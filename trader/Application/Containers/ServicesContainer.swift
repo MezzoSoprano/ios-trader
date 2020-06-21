@@ -42,6 +42,10 @@ extension DependencyContainer {
             return OrderServiceImpl(client: try! container.resolve())
         }
         
+        container.register(.singleton) { () -> WalletService in
+            return WalletServiceImpl(client: try! container.resolve())
+        }
+        
         return container
     }
 }

@@ -67,10 +67,9 @@ extension OrdersViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Cancel") { _, _  in
             self.orderService.remove(order: self.orders[indexPath.row])
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.refresh(())
-            }
+                .subscribeOn(MainScheduler.asyncInstance)
+                .subscribe(onSuccess: { _ in self.refresh(()) })
+                .disposed(by: self.rx.disposeBag)
         }
 
         return [deleteAction]

@@ -31,6 +31,12 @@ class LinkedExchangesViewController: UITableViewController {
 
 extension LinkedExchangesViewController {
     
+    @IBAction func linkExchange(_ sender: UIButton) {
+        let controller = assembly.ui.exchanges { _ in () }
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return exchanges.count
     }
@@ -42,7 +48,7 @@ extension LinkedExchangesViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let controller = assembly.ui.linkExchange(exchange: exchanges[indexPath.row])
-//        present(controller, animated: true)
+        let controller = assembly.ui.accounts(exchange: Exchange(rawValue: exchanges[indexPath.row].name)!)
+        present(controller, animated: true)
     }
 }

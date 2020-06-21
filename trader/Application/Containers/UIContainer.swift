@@ -15,27 +15,32 @@ protocol UIContainer {
     func auth() -> UIViewController
     func main() -> UIViewController
     func buy() -> UIViewController
-//    func currenciesFrom(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController
-//    func currenciesTo(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController
+    func currenciesFrom(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController
+    func currenciesTo(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController
     func exchanges(onSelect: @escaping Handler<Exchange>) -> UIViewController
     func linkExchange(exchange: Exchange) -> UIViewController
     func linkedExchanges() -> UIViewController
+    func accounts(exchange: Exchange) -> UIViewController
 }
 
 // swiftlint:disable force_try
 extension DependencyContainer: UIContainer {
+
+    func accounts(exchange: Exchange) -> UIViewController {
+        return try! resolve(arguments: exchange) as AccountsViewController
+    }
     
     func linkedExchanges() -> UIViewController {
         return try! resolve() as LinkedExchangesViewController
     }
     
-//    func currenciesFrom(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController {
-//        return try! resolve(arguments: selected, onSelect) as CurrenciesFromViewController
-//    }
-//
-//    func currenciesTo(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController {
-//        return try! resolve(arguments: selected, onSelect) as CurrenciesToViewController
-//    }
+    func currenciesFrom(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController {
+        return try! resolve(arguments: selected, onSelect) as CurrenciesFromViewController
+    }
+
+    func currenciesTo(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController {
+        return try! resolve(arguments: selected, onSelect) as CurrenciesToViewController
+    }
     
     func buy() -> UIViewController {
         return try! resolve() as BuyCryptoViewController
@@ -99,10 +104,33 @@ extension DependencyContainer {
             return controller
         }
         
+        container.register { (_: Exchange) -> AccountsViewController in
+            let controller = UIStoryboard.flows.instantiateViewController() as AccountsViewController
+            controller.walletService = try! container.resolve()
+            return controller
+        }
+        
+        container.register { (selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> CurrenciesFromViewController in
+            let controller = UIStoryboard.flows.instantiateViewController() as CurrenciesFromViewController
+            controller.walletService = try! container.resolve()
+            controller.onSelect = onSelect
+            controller.selected = selected
+            return controller
+        }
+        
+        container.register { (selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> CurrenciesToViewController in
+            let controller = UIStoryboard.flows.instantiateViewController() as CurrenciesToViewController
+            controller.walletService = try! container.resolve()
+            controller.onSelect = onSelect
+            controller.selected = selected
+            return controller
+        }
+        
         container.register { () -> LinkedExchangesViewController in
             let controller = UIStoryboard.flows.instantiateViewController() as LinkedExchangesViewController
             controller.exchangeService = try! container.resolve()
             controller.title = "Linked Exchanges"
+            controller.tabBarItem.title = "Wallets"
             controller.tabBarItem.image = #imageLiteral(resourceName: "wallet")
             return controller
         }
@@ -124,6 +152,7 @@ extension DependencyContainer {
             let controller = UIStoryboard.flows.instantiateViewController() as BuyCryptoViewController
             controller.tabBarItem.image = #imageLiteral(resourceName: "wallet")
             controller.navigationItem.largeTitleDisplayMode = .never
+            controller.service = try! container.resolve()
             return controller
         }
         

@@ -64,6 +64,9 @@ extension ExchangeServiceImpl: ExchangeService {
     }
     
     func link(exchange: Exchange.Link) -> Single<Void> {
+        let tempKey = binance.key
+        let tempSecretKey = binance.secret
+        
         binance.key = exchange.apiKey
         binance.secret = exchange.secretKey
         
@@ -117,6 +120,8 @@ extension ExchangeServiceImpl: ExchangeService {
                 }
 
             }) { err in
+                self?.binance.key = tempKey
+                self?.binance.secret = tempSecretKey
                 observer(.error(err))
             }
             
