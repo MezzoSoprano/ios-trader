@@ -96,7 +96,6 @@
 		F1EAD665249F4FF500FACD55 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAD664249F4FF500FACD55 /* AccountsViewController.swift */; };
 		F1EAD668249F529400FACD55 /* WalletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAD667249F529400FACD55 /* WalletService.swift */; };
 		F1EAD66A249F52A000FACD55 /* WalletServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAD669249F52A000FACD55 /* WalletServiceImpl.swift */; };
-		F1EF5A032498FA680057F022 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF5A022498FA670057F022 /* WebSocket.swift */; };
 		F1F2825F2499221B005CF3F5 /* BuyCryptoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2825E2499221B005CF3F5 /* BuyCryptoProtocols.swift */; };
 		F1F2826124992251005CF3F5 /* BuyCryptoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2826024992251005CF3F5 /* BuyCryptoRouter.swift */; };
 		F1F2826324992265005CF3F5 /* BuyCryptoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2826224992265005CF3F5 /* BuyCryptoPresenter.swift */; };
@@ -221,7 +220,7 @@
 		F1EAD664249F4FF500FACD55 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		F1EAD667249F529400FACD55 /* WalletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletService.swift; sourceTree = "<group>"; };
 		F1EAD669249F52A000FACD55 /* WalletServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletServiceImpl.swift; sourceTree = "<group>"; };
-		F1EF5A022498FA670057F022 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		F1EAD66B249F929800FACD55 /* libAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F2825E2499221B005CF3F5 /* BuyCryptoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoProtocols.swift; sourceTree = "<group>"; };
 		F1F2826024992251005CF3F5 /* BuyCryptoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoRouter.swift; sourceTree = "<group>"; };
 		F1F2826224992265005CF3F5 /* BuyCryptoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoPresenter.swift; sourceTree = "<group>"; };
@@ -258,6 +257,7 @@
 		3FF09388BDFADD3BE3CEC5EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1EAD66B249F929800FACD55 /* libAlamofire.a */,
 				F1DD2779247E997700EFE9D2 /* libCommonCrypto.a */,
 				131A6E1E917C3948BEE5A788 /* libPods-trader.a */,
 			);
@@ -394,7 +394,6 @@
 		F169800324213DC300774568 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				F1EF5A012498FA410057F022 /* WebSockets */,
 				F177940B2498C0E6004D440C /* Bittrex */,
 				F169800424213DD900774568 /* Analytics.swift */,
 				F1CBFAC72423C0D000FD4F2E /* KeychainCache.swift */,
@@ -686,14 +685,6 @@
 			path = Wallet;
 			sourceTree = "<group>";
 		};
-		F1EF5A012498FA410057F022 /* WebSockets */ = {
-			isa = PBXGroup;
-			children = (
-				F1EF5A022498FA670057F022 /* WebSocket.swift */,
-			);
-			path = WebSockets;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -978,7 +969,6 @@
 				F1F282652499227A005CF3F5 /* BuyCryptoInteractor.swift in Sources */,
 				F17794252498C143004D440C /* OrderBook.swift in Sources */,
 				F169800524213DD900774568 /* Analytics.swift in Sources */,
-				F1EF5A032498FA680057F022 /* WebSocket.swift in Sources */,
 				F1BE972C248F6E700072782F /* ExchangeInfo.swift in Sources */,
 				F1C327F62479B408008A6D95 /* BaseAuthViewController.swift in Sources */,
 				F1F2826324992265005CF3F5 /* BuyCryptoPresenter.swift in Sources */,

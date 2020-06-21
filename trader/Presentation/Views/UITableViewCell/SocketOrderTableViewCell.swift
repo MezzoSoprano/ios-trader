@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class SocketOrderTableViewCell: UITableViewCell {
     
@@ -17,10 +18,16 @@ class SocketOrderTableViewCell: UITableViewCell {
 
 extension SocketOrderTableViewCell {
     
+    var formatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .full
+        return formatter
+    }
+    
     func configure(_ order: SocketOrder) {
         self.amountLabel.text = order.amount
         self.priceLabel.text = order.price
-        self.dateLabel.text = order.date
+        self.dateLabel.text = formatter.string(from: order.date)
         
         self.priceLabel.textColor = order.side == .buy ? .green : .red
     }
@@ -31,12 +38,19 @@ struct SocketOrder {
     let side: OrderSide
     let price: String
     let amount: String
-    let date: String
+    let date: Date
     
     init(from: Order) {
         self.side = from.side
         self.price = from.price
         self.amount = from.originalQuantity
-        self.date = "\(from.time)"
+        self.date = Date()
+    }
+    
+    init(json: JSON) {
+        self.side = json["m"].bool == false ? .buy : .sell
+        self.price = json["p"].string ?? ""
+        self.amount = json["q"].string ?? ""
+        self.date = Date()
     }
 }

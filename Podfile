@@ -17,11 +17,13 @@ def pods
   pod 'FirebaseUI/Google'
   pod 'Firebase/Database'
   pod 'RxCoreLocation'
+#  pod 'Alamofire'
   pod 'CryptoSwift', '~> 1.0'
   pod 'APIKit'
   pod 'Starscream', '~> 3.1.0'
-  pod 'SwiftDate'
+#  pod 'SwiftDate'
   pod 'CodableFirebase'
+#  pod 'BinanceChain', :git => 'https://github.com/buckcao/SwiftBinanceChain.git'
 end
 
 target 'trader' do

@@ -8,6 +8,8 @@
 
 import UIKit
 import RxSwift
+import Starscream
+import SwiftyJSON
 
 class BuyCryptoViewController: UIViewController {
     
@@ -23,6 +25,12 @@ class BuyCryptoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    var socket: WebSocket?
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        socket?.disconnect()
     }
     
     var accFrom: AccountBalance? {
@@ -58,6 +66,18 @@ extension BuyCryptoViewController: UITableViewDataSource {
     @IBAction func selectAccFrom(_ sender: UIButton) {
         let c = assembly.ui.currenciesFrom(selected: accFrom) { acc in
             self.accFrom = acc
+            
+            if let accc = self.accTo, let acccc = self.accFrom {
+                self.socket?.disconnect()
+                self.orders = []
+                self.ordersTableView.reloadData()
+                var request = URLRequest(url: URL(string: "wss://stream.binance.com:9443/ws/\(accc.asset+acccc.asset)@aggTrade")!)
+                request.timeoutInterval = 5
+                self.socket = WebSocket(request: request)
+                self.socket?.delegate = self
+                self.socket?.connect()
+            }
+            
             self.dismiss(animated: true)
         }
         
@@ -67,6 +87,18 @@ extension BuyCryptoViewController: UITableViewDataSource {
     @IBAction func selectAccTo(_ sender: UIButton) {
         let c = assembly.ui.currenciesTo(selected: accTo) { acc in
             self.accTo = acc
+            
+            if let accc = self.accTo, let acccc = self.accFrom {
+                self.socket?.disconnect()
+                self.orders = []
+                self.ordersTableView.reloadData()
+                var request = URLRequest(url: URL(string: "wss://stream.binance.com:9443/ws/\(accc.asset.lowercased()+acccc.asset.lowercased())@aggTrade")!)
+                request.timeoutInterval = 5
+                self.socket = WebSocket(request: request)
+                self.socket?.delegate = self
+                self.socket?.connect()
+            }
+            
             self.dismiss(animated: true)
         }
         
@@ -120,3 +152,97 @@ extension BuyCryptoViewController: UITextFieldDelegate {
         return true
     }
 }
+
+extension BuyCryptoViewController: WebSocketDelegate {
+    
+    func websocketDidConnect(socket: WebSocketClient) {
+        print(#function)
+        
+//        subscribe(marketDepth: ["BNB_BTC.B-918"])
+    }
+    
+    func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+        print(#function)
+    }
+    
+    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+        guard let textdata = text.data(using: .utf8, allowLossyConversion: false) else { return }
+        guard let json = try? JSON(data: textdata) else { return }
+        
+        ordersTableView.beginUpdates()
+        orders.insert(.init(json: json), at: 0)
+        ordersTableView.insertRows(at: [.init(row: 0, section: 0)], with: .automatic)
+        ordersTableView.endUpdates()
+        
+        print(text)
+//        ordersTableView.reloadData()
+    }
+    
+    func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+        print(String.init(data: data, encoding: .utf8))
+        print(#function)
+    }
+}
+
+enum Parameter: String {
+    
+    case topic
+    case address
+    case userAddress
+    case symbols
+}
+
+struct Message {
+
+    var method: Method = .subscribe
+    var topic: String = ""
+    var parameters: [Parameter: Any] = [:]
+
+    init(method: Method, topic: String, parameters: [Parameter:Any]) {
+        self.method = method
+        self.topic = topic
+        self.parameters = parameters
+    }
+
+    init(method: Method, topic: Topic, parameters: [Parameter:Any]) {
+        self.init(method: method, topic: topic.rawValue, parameters: parameters)
+    }
+
+    var json: String {
+        var message: [String: Any] = [:]
+        message["method"] = self.method.rawValue
+        message["topic"] = self.topic
+        self.parameters.forEach({ message[$0.0.rawValue] = $0.1 })
+        return JSON(message).rawString() ?? "{}"
+    }
+}
+
+enum Topic: String {
+    
+    case orders = "orders"
+    case accounts = "accounts"
+    case transfers = "transfers"
+    case trades = "trades"
+    case marketDiff = "marketDiff"
+    case marketDepth = "marketDepth"
+    case kline = "kline_%@"
+    case ticker = "ticker"
+    case allTickers = "allTickers"
+    case miniTicker = "miniTicker"
+    case allMiniTickers = "allMiniTickers"
+    case blockHeight = "blockheight"
+}
+
+internal enum Method: String {
+    case subscribe = "subscribe"
+    case unsubscribe = "unsubscribe"
+}
+
+public struct Subscription {
+    internal var message: Message
+}
+
+public enum Symbols: String {
+    case all = "$all"
+}
+
