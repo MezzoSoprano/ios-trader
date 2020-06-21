@@ -23,6 +23,8 @@ public enum RequestMethod: String {
 
 public class BinanceAPI {
 
+    var authorized: Bool { return key != "?" }
+    
     private let baseUrl = "https://api.binance.com/api/"
     var key: String
     var secret: String

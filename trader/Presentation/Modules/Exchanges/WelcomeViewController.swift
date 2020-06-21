@@ -20,6 +20,6 @@ extension WelcomeViewController {
     
     @IBAction func createBot(_ sender: Any) {
         let controller = assembly.ui.exchanges { _ in () }
-        present(controller, animated: true)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

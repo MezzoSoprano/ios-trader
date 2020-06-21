@@ -92,6 +92,7 @@
 		F1DD277A247E997700EFE9D2 /* libCommonCrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DD2779247E997700EFE9D2 /* libCommonCrypto.a */; };
 		F1EAB87A2479868D006C2590 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1EAB8792479868D006C2590 /* GoogleService-Info.plist */; };
 		F1EAB87E247992E5006C2590 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAB87D247992E5006C2590 /* UIViewController.swift */; };
+		F1EAD663249ED68000FACD55 /* LinkedExchangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EAD662249ED68000FACD55 /* LinkedExchangesViewController.swift */; };
 		F1EF5A032498FA680057F022 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF5A022498FA670057F022 /* WebSocket.swift */; };
 		F1F2825F2499221B005CF3F5 /* BuyCryptoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2825E2499221B005CF3F5 /* BuyCryptoProtocols.swift */; };
 		F1F2826124992251005CF3F5 /* BuyCryptoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2826024992251005CF3F5 /* BuyCryptoRouter.swift */; };
@@ -213,6 +214,7 @@
 		F1EAB8762479859B006C2590 /* Example.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Example.xcconfig; sourceTree = "<group>"; };
 		F1EAB8792479868D006C2590 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1EAB87D247992E5006C2590 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F1EAD662249ED68000FACD55 /* LinkedExchangesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedExchangesViewController.swift; sourceTree = "<group>"; };
 		F1EF5A022498FA670057F022 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		F1F2825E2499221B005CF3F5 /* BuyCryptoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoProtocols.swift; sourceTree = "<group>"; };
 		F1F2826024992251005CF3F5 /* BuyCryptoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCryptoRouter.swift; sourceTree = "<group>"; };
@@ -562,14 +564,15 @@
 			path = Wallets;
 			sourceTree = "<group>";
 		};
-		F1C32802247ABBC8008A6D95 /* Bots */ = {
+		F1C32802247ABBC8008A6D95 /* Exchanges */ = {
 			isa = PBXGroup;
 			children = (
 				F1062721247C668A00701A77 /* ExchangesViewController.swift */,
 				F1C32803247ABC5B008A6D95 /* WelcomeViewController.swift */,
 				F17B50B4247C673D0093AB1B /* LinkExchangeViewController.swift */,
+				F1EAD662249ED68000FACD55 /* LinkedExchangesViewController.swift */,
 			);
-			path = Bots;
+			path = Exchanges;
 			sourceTree = "<group>";
 		};
 		F1C32827247AF4E5008A6D95 /* Views */ = {
@@ -631,7 +634,7 @@
 				F1CBFAC32423B6AD00FD4F2E /* Application */,
 				F1BE9731248F825D0072782F /* Orders */,
 				F1C327F42479B389008A6D95 /* Authorization */,
-				F1C32802247ABBC8008A6D95 /* Bots */,
+				F1C32802247ABBC8008A6D95 /* Exchanges */,
 				F1C32801247ABB5F008A6D95 /* Wallets */,
 				F1C32800247ABB45008A6D95 /* Settings */,
 			);
@@ -967,6 +970,7 @@
 				F1C3282A247AF50D008A6D95 /* SwitchTableViewCell.swift in Sources */,
 				F17794242498C143004D440C /* Market.swift in Sources */,
 				F17794152498C11A004D440C /* MarketService.swift in Sources */,
+				F1EAD663249ED68000FACD55 /* LinkedExchangesViewController.swift in Sources */,
 				F1F2826124992251005CF3F5 /* BuyCryptoRouter.swift in Sources */,
 				F1452E832499124500DF1267 /* SignUpViewController.swift in Sources */,
 				F109FB39247C6E690041B5A7 /* User+Current.swift in Sources */,

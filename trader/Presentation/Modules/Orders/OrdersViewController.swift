@@ -19,7 +19,7 @@ class OrdersViewController: UITableViewController {
         orderService
             .all()
             .observeOn(MainScheduler.asyncInstance)
-            .subscribe(onSuccess: { self.orders = $0; self.tableView.reloadData(); self.finishLoading() },
+            .subscribe(onSuccess: { self.orders = $0.sorted { a, b in a.time > b.time }; self.tableView.reloadData(); self.finishLoading() },
                        onError: { print($0); self.finishLoading() })
             .disposed(by: rx.disposeBag)
     }
@@ -33,15 +33,16 @@ class OrdersViewController: UITableViewController {
 extension OrdersViewController {
     
     @IBAction func add(_ sender: Any) {
-//        let controller = assembly.ui
+        let controller = assembly.ui.buy()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @IBAction func refresh(_ sender: UIRefreshControl) {
+    @IBAction func refresh(_ sender: Any) {
         orderService
             .all()
             .observeOn(MainScheduler.asyncInstance)
-            .subscribe(onSuccess: { self.orders = $0; self.tableView.reloadData(); sender.endRefreshing() },
-                       onError: { print($0); self.finishLoading() })
+            .subscribe(onSuccess: { self.orders = $0.sorted { a, b in a.time > b.time }; self.tableView.reloadData(); self.tableView.refreshControl?.endRefreshing() },
+                       onError: { print($0); self.finishLoading(); self.tableView.refreshControl?.endRefreshing() })
             .disposed(by: rx.disposeBag)
     }
     
@@ -57,6 +58,22 @@ extension OrdersViewController {
         let cell = tableView.dequeueReusableCell(for: indexPath) as OrderTableViewCell
         cell.configure(with: orders[indexPath.row])
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return self.orders[indexPath.row].status == .new
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Cancel") { _, _  in
+            self.orderService.remove(order: self.orders[indexPath.row])
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.refresh(())
+            }
+        }
+
+        return [deleteAction]
     }
     
     func startLoading() {

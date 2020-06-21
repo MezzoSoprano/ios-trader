@@ -11,4 +11,5 @@ import RxSwift
 protocol OrderService {
     
     func all() -> Single<[Order]>
+    func remove(order: Order)
 }

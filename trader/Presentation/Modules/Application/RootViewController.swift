@@ -20,11 +20,14 @@ class RootViewController: UIViewController {
             .subscribe(onNext: { [weak self] in $0 == nil ? self?.presentWelcome() : self?.presentMain() })
             .disposed(by: rx.disposeBag)
         
-//        assembly.core.binance().account(success: { acc in
-//            print(acc)
-//        }) { err in
-//            print(err)
-//        }
+        let key = "password".data(using: .utf8)
+        let text = "text".data(using: .utf8)
+        
+        let sk = SymmetricKey(size: .bits256)
+        let encrypted = try! AES.GCM.seal(text!, using: sk, authenticating: key!)
+        let decrypted = try! AES.GCM.open(encrypted, using: sk, authenticating: key!)
+        
+        _ = String.init(data: decrypted, encoding: .utf8).map { print($0) }
     }
     
     var authService: AuthService!

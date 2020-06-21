@@ -21,6 +21,7 @@ def pods
   pod 'APIKit'
   pod 'Starscream', '~> 3.1.0'
   pod 'SwiftDate'
+  pod 'CodableFirebase'
 end
 
 target 'trader' do

@@ -12,5 +12,5 @@ protocol ExchangeService {
     
     func availableExchanges() -> Single<[String]>
     func link(exchange: Exchange.Link) -> Single<Void>
-    func linkedExchanges() -> Single<Exchange.Link>
+    func linkedExchanges() -> Single<[Exchange.Linked]>
 }

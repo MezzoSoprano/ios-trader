@@ -45,6 +45,6 @@ extension ExchangesViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = assembly.ui.linkExchange(exchange: exchanges[indexPath.row])
-        present(controller, animated: true)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

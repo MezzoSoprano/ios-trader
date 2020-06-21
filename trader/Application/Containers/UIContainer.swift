@@ -19,10 +19,15 @@ protocol UIContainer {
 //    func currenciesTo(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController
     func exchanges(onSelect: @escaping Handler<Exchange>) -> UIViewController
     func linkExchange(exchange: Exchange) -> UIViewController
+    func linkedExchanges() -> UIViewController
 }
 
 // swiftlint:disable force_try
 extension DependencyContainer: UIContainer {
+    
+    func linkedExchanges() -> UIViewController {
+        return try! resolve() as LinkedExchangesViewController
+    }
     
 //    func currenciesFrom(selected: AccountBalance?, onSelect: @escaping Handler<AccountBalance>) -> UIViewController {
 //        return try! resolve(arguments: selected, onSelect) as CurrenciesFromViewController
@@ -94,6 +99,14 @@ extension DependencyContainer {
             return controller
         }
         
+        container.register { () -> LinkedExchangesViewController in
+            let controller = UIStoryboard.flows.instantiateViewController() as LinkedExchangesViewController
+            controller.exchangeService = try! container.resolve()
+            controller.title = "Linked Exchanges"
+            controller.tabBarItem.image = #imageLiteral(resourceName: "wallet")
+            return controller
+        }
+        
         container.register { () -> SettingsViewController in
             let controller = UIStoryboard.flows.instantiateViewController() as SettingsViewController
             controller.authService = try! container.resolve()
@@ -110,6 +123,7 @@ extension DependencyContainer {
         container.register { () -> BuyCryptoViewController in
             let controller = UIStoryboard.flows.instantiateViewController() as BuyCryptoViewController
             controller.tabBarItem.image = #imageLiteral(resourceName: "wallet")
+            controller.navigationItem.largeTitleDisplayMode = .never
             return controller
         }
         
@@ -138,6 +152,7 @@ extension DependencyContainer {
             let controller = UIStoryboard.flows.instantiateViewController() as LinkExchangeViewController
             controller.exchange = exchange
             controller.exchangeService = try! container.resolve()
+            controller.navigationItem.largeTitleDisplayMode = .never
             return controller
         }
         

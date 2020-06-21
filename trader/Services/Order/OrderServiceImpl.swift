@@ -19,6 +19,10 @@ class OrderServiceImpl {
 
 extension OrderServiceImpl: OrderService {
     
+    func remove(order: Order) {
+        binanceClient.cancelOrder(symbol: order.symbol, orderId: order.orderId, success: { _ in () }, failure: { print($0) })
+    }
+
     func all() -> Single<[Order]> {
         return .create { observer in
             

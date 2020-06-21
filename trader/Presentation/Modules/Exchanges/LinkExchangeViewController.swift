@@ -46,7 +46,8 @@ extension LinkExchangeViewController {
     }
     
     func succeed() {
-        
+        let controller = assembly.ui.linkedExchanges()
+        self.navigationController?.setViewControllers([controller], animated: true)
     }
     
     func configure(error: String) {
